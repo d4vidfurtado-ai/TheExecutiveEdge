@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diogo Ferreira | Senior Executive Career Strategist</title>
-  <meta name="description" content="Acelero carreiras de managers através de coaching baseado em ciência, estratégia executiva e posicionamento profissional de alto impacto." />
+  <meta name="description" content="Science-based coaching for managers who want to accelerate their path to Head, Director or VP." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -17,12 +17,28 @@
     <div class="nav-inner">
       <a href="#home" class="logo">Diogo<span>Ferreira</span></a>
       <ul class="nav-links">
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#science">Metodologia</a></li>
-        <li><a href="#testimonials">Resultados</a></li>
-        <li><a href="#blog">Insights</a></li>
-        <li><a href="#contact" class="btn-nav">Discovery Call</a></li>
+        <li><a href="#about"        data-i18n="nav_about">About</a></li>
+        <li><a href="#services"     data-i18n="nav_services">Services</a></li>
+        <li><a href="#science"      data-i18n="nav_methodology">Methodology</a></li>
+        <li><a href="#testimonials" data-i18n="nav_results">Results</a></li>
+        <li><a href="#blog"         data-i18n="nav_insights">Insights</a></li>
+        <li>
+          <!-- Language Switcher -->
+          <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" id="langToggle" aria-haspopup="true" aria-expanded="false">
+              <span class="lang-flag" id="langFlag">🇬🇧</span>
+              <span class="lang-code" id="langCode">EN</span>
+              <span class="lang-caret">▾</span>
+            </button>
+            <ul class="lang-dropdown" id="langDropdown" role="menu">
+              <li><button data-lang="en" role="menuitem"><span>🇬🇧</span> English</button></li>
+              <li><button data-lang="pt" role="menuitem"><span>🇵🇹</span> Português</button></li>
+              <li><button data-lang="es" role="menuitem"><span>🇪🇸</span> Español</button></li>
+              <li><button data-lang="fr" role="menuitem"><span>🇫🇷</span> Français</button></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#contact" class="btn-nav" data-i18n="nav_cta">Discovery Call</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -34,49 +50,36 @@
   <section id="home" class="hero">
     <div class="hero-bg"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow">Senior Executive Career Strategist</p>
-      <h1 class="hero-headline">A sua próxima promoção<br /><em>começa aqui.</em></h1>
-      <p class="hero-sub">
-        Coaching baseado em ciência para managers que querem acelerar a progressão para Head, Director ou VP — com estratégia, presença executiva e posicionamento de topo.
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">Senior Executive Career Strategist</p>
+      <h1 class="hero-headline">
+        <span data-i18n="hero_h1">Your next promotion</span><br />
+        <em data-i18n="hero_h1_em">starts here.</em>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">
+        Science-based coaching for managers who want to accelerate their path to Head, Director or VP — with strategy, executive presence and top-tier positioning.
       </p>
       <div class="hero-cta">
-        <a href="#contact" class="btn-primary">Marcar Discovery Call</a>
-        <a href="#services" class="btn-ghost">Ver Programas</a>
+        <a href="#contact" class="btn-primary" data-i18n="hero_cta1">Book a Discovery Call</a>
+        <a href="#services" class="btn-ghost"  data-i18n="hero_cta2">View Programs</a>
       </div>
       <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">+120</span>
-          <span class="stat-label">Managers acompanhados</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">87%</span>
-          <span class="stat-label">Taxa de promoção em 12 meses</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">15+</span>
-          <span class="stat-label">Anos de experiência executiva</span>
-        </div>
+        <div class="stat"><span class="stat-num">+120</span><span class="stat-label" data-i18n="stat1_label">Managers coached</span></div>
+        <div class="stat"><span class="stat-num">87%</span><span class="stat-label"  data-i18n="stat2_label">Promotion rate in 12 months</span></div>
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-label"  data-i18n="stat3_label">Years of executive experience</span></div>
       </div>
     </div>
-    <div class="hero-scroll">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+    <div class="hero-scroll"><span>scroll</span><div class="scroll-line"></div></div>
   </section>
 
   <!-- LOGOS STRIP -->
   <section class="logos-strip">
     <div class="container">
-      <p class="logos-label">Managers de empresas como</p>
+      <p class="logos-label" data-i18n="logos_label">Managers from companies like</p>
       <div class="logos-row">
-        <span class="logo-item">Deloitte</span>
-        <span class="logo-item">McKinsey</span>
-        <span class="logo-item">EY</span>
-        <span class="logo-item">Siemens</span>
-        <span class="logo-item">NOS</span>
-        <span class="logo-item">Galp</span>
-        <span class="logo-item">BPI</span>
-        <span class="logo-item">Millennium</span>
+        <span class="logo-item">Deloitte</span><span class="logo-item">McKinsey</span>
+        <span class="logo-item">EY</span><span class="logo-item">Siemens</span>
+        <span class="logo-item">NOS</span><span class="logo-item">Galp</span>
+        <span class="logo-item">BPI</span><span class="logo-item">Millennium</span>
       </div>
     </div>
   </section>
@@ -89,40 +92,31 @@
           <div class="about-img-placeholder">DF</div>
           <div class="about-badge">
             <span class="badge-num">15+</span>
-            <span class="badge-text">Anos<br/>Executivo</span>
+            <span class="badge-text" data-i18n="badge_text">Years<br/>Executive</span>
           </div>
         </div>
       </div>
       <div class="about-text">
-        <p class="section-eyebrow">Sobre Mim</p>
-        <h2 class="section-title">Não sou um coach motivacional.<br />Sou um estratega de carreiras.</h2>
-        <p>
-          Com mais de 15 anos de experiência em gestão executiva e liderança organizacional, criei um método que combina <strong>psicologia do comportamento, frameworks analíticas e estratégia de posicionamento</strong> para transformar managers competentes em líderes de referência.
-        </p>
-        <p>
-          Trabalhei em ambientes de alta pressão, liderei equipas multidisciplinares e entendi o que separa quem sobe rapidamente de quem fica estagnado — raramente é a competência técnica.
-        </p>
-        <p>
-          O meu método é rigoroso, baseado em evidência científica e adaptado à realidade corporativa portuguesa e europeia.
-        </p>
+        <p class="section-eyebrow" data-i18n="about_eyebrow">About Me</p>
+        <h2 class="section-title" data-i18n="about_h2">I'm not a motivational coach.<br />I'm a career strategist.</h2>
+        <p data-i18n-html="about_p1">With over 15 years of experience in executive management and organisational leadership, I developed a method that combines <strong>behavioural psychology, analytical frameworks and positioning strategy</strong> to transform competent managers into reference leaders.</p>
+        <p data-i18n="about_p2">I've worked in high-pressure environments, led multidisciplinary teams and understood what separates those who rise quickly from those who stagnate — it's rarely technical competence.</p>
+        <p data-i18n="about_p3">My method is rigorous, science-based and adapted to the European corporate reality.</p>
         <div class="about-pills">
-          <span class="pill">Psicologia Organizacional</span>
-          <span class="pill">Presença Executiva</span>
-          <span class="pill">LinkedIn Authority</span>
-          <span class="pill">Frameworks Analíticas</span>
-          <span class="pill">Comunicação de Alto Impacto</span>
-          <span class="pill">Career Strategy</span>
+          <span class="pill">Organisational Psychology</span><span class="pill">Executive Presence</span>
+          <span class="pill">LinkedIn Authority</span><span class="pill">Analytical Frameworks</span>
+          <span class="pill">High-Impact Communication</span><span class="pill">Career Strategy</span>
         </div>
-        <a href="#contact" class="btn-primary">Falar comigo</a>
+        <a href="#contact" class="btn-primary" data-i18n="about_cta">Talk to me</a>
       </div>
     </div>
   </section>
 
-  <!-- VALUE PROP BREAK -->
+  <!-- VALUE BREAK -->
   <section class="value-break">
     <div class="container">
-      <blockquote class="big-quote">
-        "O que separa um bom manager de um líder de referência não é o que sabe — é como se posiciona, comunica e é percebido."
+      <blockquote class="big-quote" data-i18n="big_quote">
+        What separates a good manager from a reference leader is not what they know — it's how they position, communicate and are perceived.
       </blockquote>
     </div>
   </section>
@@ -130,127 +124,85 @@
   <!-- SERVICES -->
   <section id="services" class="services">
     <div class="container">
-      <p class="section-eyebrow center">Programas Premium</p>
-      <h2 class="section-title center">Uma oferta construída<br />para resultados reais</h2>
+      <p class="section-eyebrow center" data-i18n="services_eyebrow">Premium Programs</p>
+      <h2 class="section-title center" data-i18n="services_h2">An offer built<br />for real results</h2>
       <div class="services-grid">
 
         <div class="service-card featured">
-          <div class="service-badge">Mais Popular</div>
+          <div class="service-badge" data-i18n="s1_badge">Most Popular</div>
           <div class="service-icon">🚀</div>
-          <h3>Career Acceleration</h3>
-          <p class="service-duration">8–12 semanas · 1:1</p>
-          <p class="service-desc">O programa flagship. Diagnóstico 360, plano de carreira personalizado, comunicação executiva, presença digital e preparação estruturada para promoção.</p>
+          <h3 data-i18n="s1_title">Career Acceleration</h3>
+          <p class="service-duration" data-i18n="s1_duration">8–12 weeks · 1:1</p>
+          <p class="service-desc"    data-i18n="s1_desc">The flagship program. 360 diagnosis, personalised career plan, executive communication, digital presence and structured promotion preparation.</p>
           <ul class="service-list">
-            <li>Diagnóstico e roadmap de carreira</li>
-            <li>Comunicação e influência executiva</li>
-            <li>Presença executiva e imagem</li>
-            <li>Estratégia de LinkedIn</li>
-            <li>Preparação para promoção</li>
-            <li>Acompanhamento semanal com métricas</li>
+            <li data-i18n="s1_li1">Career diagnosis and roadmap</li>
+            <li data-i18n="s1_li2">Executive communication and influence</li>
+            <li data-i18n="s1_li3">Executive presence and image</li>
+            <li data-i18n="s1_li4">LinkedIn strategy</li>
+            <li data-i18n="s1_li5">Promotion preparation</li>
+            <li data-i18n="s1_li6">Weekly follow-up with metrics</li>
           </ul>
-          <div class="service-price">A partir de 2.500€</div>
-          <a href="#contact" class="btn-primary full">Saber mais</a>
+          <div class="service-price" data-i18n="s1_price">From €2,500</div>
+          <a href="#contact" class="btn-primary full" data-i18n="s1_cta">Learn more</a>
         </div>
 
         <div class="service-card">
           <div class="service-icon">⚡</div>
-          <h3>Executive Presence Upgrade</h3>
-          <p class="service-duration">4 semanas · 1:1</p>
-          <p class="service-desc">Para quem quer impacto rápido na forma como é percebido. Imagem, comunicação não verbal, storytelling e performance em reuniões de alto nível.</p>
+          <h3 data-i18n="s2_title">Executive Presence Upgrade</h3>
+          <p class="service-duration" data-i18n="s2_duration">4 weeks · 1:1</p>
+          <p class="service-desc"    data-i18n="s2_desc">For those who want quick impact on how they are perceived. Image, non-verbal communication, storytelling and performance in high-level meetings.</p>
           <ul class="service-list">
-            <li>Imagem e identidade profissional</li>
-            <li>Linguagem corporal e paraverbal</li>
-            <li>Storytelling executivo</li>
-            <li>Performance em reuniões</li>
+            <li data-i18n="s2_li1">Professional image and identity</li>
+            <li data-i18n="s2_li2">Body language and paraverbal</li>
+            <li data-i18n="s2_li3">Executive storytelling</li>
+            <li data-i18n="s2_li4">Meeting performance</li>
           </ul>
-          <div class="service-price">A partir de 1.500€</div>
-          <a href="#contact" class="btn-outline full">Saber mais</a>
+          <div class="service-price" data-i18n="s2_price">From €1,500</div>
+          <a href="#contact" class="btn-outline full" data-i18n="s2_cta">Learn more</a>
         </div>
 
         <div class="service-card">
           <div class="service-icon">🏢</div>
-          <h3>Corporate Workshops</h3>
-          <p class="service-duration">Formato à medida · In-company</p>
-          <p class="service-desc">Formações de alto impacto para equipas de gestão. Liderança transformacional, comunicação interna, soft skills e LinkedIn para executivos.</p>
+          <h3 data-i18n="s3_title">Corporate Workshops</h3>
+          <p class="service-duration" data-i18n="s3_duration">Tailored format · In-company</p>
+          <p class="service-desc"    data-i18n="s3_desc">High-impact training for management teams. Transformational leadership, internal communication, soft skills and LinkedIn for executives.</p>
           <ul class="service-list">
-            <li>Liderança e gestão de equipas</li>
-            <li>Comunicação de alto impacto</li>
-            <li>Soft skills avançados</li>
-            <li>LinkedIn para executivos</li>
+            <li data-i18n="s3_li1">Leadership and team management</li>
+            <li data-i18n="s3_li2">High-impact communication</li>
+            <li data-i18n="s3_li3">Advanced soft skills</li>
+            <li data-i18n="s3_li4">LinkedIn for executives</li>
           </ul>
-          <div class="service-price">Proposta personalizada</div>
-          <a href="#contact" class="btn-outline full">Pedir proposta</a>
+          <div class="service-price" data-i18n="s3_price">Custom proposal</div>
+          <a href="#contact" class="btn-outline full" data-i18n="s3_cta">Request proposal</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- SCIENCE / METHOD -->
+  <!-- SCIENCE -->
   <section id="science" class="science">
     <div class="container">
-      <p class="section-eyebrow center">Metodologia</p>
-      <h2 class="section-title center">Baseado em ciência.<br />Construído para resultados.</h2>
-      <p class="section-sub center">
-        Não trabalho com intuições ou motivação vazia. Cada programa assenta em investigação científica sólida e frameworks analíticas validadas.
-      </p>
+      <p class="section-eyebrow center" data-i18n="science_eyebrow">Methodology</p>
+      <h2 class="section-title center"  data-i18n="science_h2">Science-based.<br />Built for results.</h2>
+      <p class="section-sub center"     data-i18n="science_sub">I don't work with intuition or empty motivation. Every program is grounded in solid scientific research and validated analytical frameworks.</p>
 
       <div class="science-pillars">
-        <div class="pillar">
-          <div class="pillar-num">01</div>
-          <h4>Psicologia Organizacional</h4>
-          <p>Goleman (IE), Dweck (Growth Mindset), Edmondson (Psychological Safety), Amabile (Motivação) — compreender o comportamento para o transformar.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">02</div>
-          <h4>Liderança Transformacional</h4>
-          <p>Bass & Avolio, Kotter, Lencioni e Drucker — os modelos de liderança de alto desempenho que constroem carreiras duradouras.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">03</div>
-          <h4>Comunicação Científica</h4>
-          <p>Mehrabian (comunicação não verbal), Chris Voss (negociação), Nancy Duarte (storytelling) — comunicar para influenciar, não apenas para informar.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">04</div>
-          <h4>Performance & Produtividade</h4>
-          <p>Cal Newport (Deep Work), Csikszentmihalyi (Flow), BJ Fogg (Behavioral Change) — trabalhar com maior impacto, não mais horas.</p>
-        </div>
+        <div class="pillar"><div class="pillar-num">01</div><h4 data-i18n="p1_title">Organisational Psychology</h4><p data-i18n="p1_text">Goleman (EI), Dweck (Growth Mindset), Edmondson (Psychological Safety), Amabile (Motivation) — understanding behaviour to transform it.</p></div>
+        <div class="pillar"><div class="pillar-num">02</div><h4 data-i18n="p2_title">Transformational Leadership</h4><p data-i18n="p2_text">Bass &amp; Avolio, Kotter, Lencioni and Drucker — high-performance leadership models that build lasting careers.</p></div>
+        <div class="pillar"><div class="pillar-num">03</div><h4 data-i18n="p3_title">Scientific Communication</h4><p data-i18n="p3_text">Mehrabian (non-verbal), Chris Voss (negotiation), Nancy Duarte (storytelling) — communicate to influence, not just inform.</p></div>
+        <div class="pillar"><div class="pillar-num">04</div><h4 data-i18n="p4_title">Performance &amp; Productivity</h4><p data-i18n="p4_text">Cal Newport (Deep Work), Csikszentmihalyi (Flow), BJ Fogg (Behavioral Change) — work with greater impact, not more hours.</p></div>
       </div>
 
       <div class="frameworks">
-        <h3 class="frameworks-title">Frameworks Analíticas</h3>
+        <h3 class="frameworks-title" data-i18n="fw_title">Analytical Frameworks</h3>
         <div class="frameworks-grid">
-          <div class="framework-item">
-            <div class="fw-icon">📊</div>
-            <h5>Matriz Impacto × Esforço</h5>
-            <p>Priorização de iniciativas de carreira com critérios quantitativos.</p>
-          </div>
-          <div class="framework-item">
-            <div class="fw-icon">⚖️</div>
-            <h5>Weighted Decision Matrix</h5>
-            <p>Decisões de carreira objetivas: mudança de empresa, promoção, negociação.</p>
-          </div>
-          <div class="framework-item">
-            <div class="fw-icon">🎯</div>
-            <h5>OKRs Pessoais de Carreira</h5>
-            <p>Objetivos mensuráveis e key results trimestrais para progressão.</p>
-          </div>
-          <div class="framework-item">
-            <div class="fw-icon">📈</div>
-            <h5>KPIs de Visibilidade</h5>
-            <p>Visibilidade interna, influência transversal e crescimento de rede medidos.</p>
-          </div>
-          <div class="framework-item">
-            <div class="fw-icon">🗂️</div>
-            <h5>Eisenhower Matrix</h5>
-            <p>Gestão de tempo executivo com foco nas prioridades de alto impacto.</p>
-          </div>
-          <div class="framework-item">
-            <div class="fw-icon">🔄</div>
-            <h5>Feedback 360°</h5>
-            <p>Diagnóstico multidimensional para identificar gaps e oportunidades de crescimento.</p>
-          </div>
+          <div class="framework-item"><div class="fw-icon">📊</div><h5 data-i18n="fw1_title">Impact × Effort Matrix</h5><p data-i18n="fw1_text">Prioritising career initiatives with quantitative criteria.</p></div>
+          <div class="framework-item"><div class="fw-icon">⚖️</div><h5 data-i18n="fw2_title">Weighted Decision Matrix</h5><p data-i18n="fw2_text">Objective career decisions: company change, promotion, negotiation.</p></div>
+          <div class="framework-item"><div class="fw-icon">🎯</div><h5 data-i18n="fw3_title">Personal Career OKRs</h5><p data-i18n="fw3_text">Measurable objectives and quarterly key results for progression.</p></div>
+          <div class="framework-item"><div class="fw-icon">📈</div><h5 data-i18n="fw4_title">Visibility KPIs</h5><p data-i18n="fw4_text">Internal visibility, cross-functional influence and network growth — measured.</p></div>
+          <div class="framework-item"><div class="fw-icon">🗂️</div><h5 data-i18n="fw5_title">Eisenhower Matrix</h5><p data-i18n="fw5_text">Executive time management focused on high-impact priorities.</p></div>
+          <div class="framework-item"><div class="fw-icon">🔄</div><h5 data-i18n="fw6_title">360° Feedback</h5><p data-i18n="fw6_text">Multi-dimensional diagnosis to identify gaps and growth opportunities.</p></div>
         </div>
       </div>
     </div>
@@ -259,32 +211,16 @@
   <!-- PROCESS -->
   <section class="process">
     <div class="container">
-      <p class="section-eyebrow center">O Processo</p>
-      <h2 class="section-title center">Como funciona</h2>
+      <p class="section-eyebrow center" data-i18n="proc_eyebrow">The Process</p>
+      <h2 class="section-title center"  data-i18n="proc_h2">How it works</h2>
       <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h4>Discovery Call</h4>
-          <p>30 minutos gratuitos. Analisamos a sua situação atual, objetivos e fit com o programa certo.</p>
-        </div>
+        <div class="step"><div class="step-num">1</div><h4 data-i18n="step1_title">Discovery Call</h4><p data-i18n="step1_text">30 free minutes. We analyse your current situation, goals and fit with the right program.</p></div>
         <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h4>Diagnóstico 360°</h4>
-          <p>Avaliação profunda: competências, posicionamento, gaps, oportunidades e plano inicial.</p>
-        </div>
+        <div class="step"><div class="step-num">2</div><h4 data-i18n="step2_title">360° Diagnosis</h4><p data-i18n="step2_text">In-depth assessment: skills, positioning, gaps, opportunities and initial plan.</p></div>
         <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h4>Programa Personalizado</h4>
-          <p>Sessões semanais 1:1, frameworks, exercícios práticos e acompanhamento contínuo.</p>
-        </div>
+        <div class="step"><div class="step-num">3</div><h4 data-i18n="step3_title">Personalised Program</h4><p data-i18n="step3_text">Weekly 1:1 sessions, frameworks, practical exercises and continuous support.</p></div>
         <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h4>Resultados Mensuráveis</h4>
-          <p>KPIs de carreira, visibilidade, promoção e posicionamento — medidos e documentados.</p>
-        </div>
+        <div class="step"><div class="step-num">4</div><h4 data-i18n="step4_title">Measurable Results</h4><p data-i18n="step4_text">Career KPIs, visibility, promotion and positioning — measured and documented.</p></div>
       </div>
     </div>
   </section>
@@ -292,58 +228,13 @@
   <!-- TESTIMONIALS -->
   <section id="testimonials" class="testimonials">
     <div class="container">
-      <p class="section-eyebrow center">Resultados</p>
-      <h2 class="section-title center">O que dizem os managers<br />que acompanhei</h2>
+      <p class="section-eyebrow center" data-i18n="test_eyebrow">Results</p>
+      <h2 class="section-title center"  data-i18n="test_h2">What the managers<br />I've coached say</h2>
       <div class="testimonials-grid">
-
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Em 6 meses passei de Team Lead a Head of Operations. O Diogo deu-me as ferramentas que precisava para me posicionar correctamente e comunicar o meu valor à direcção."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">MC</div>
-            <div>
-              <strong>Marta C.</strong>
-              <span>Head of Operations · Fintech</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"A abordagem científica fez toda a diferença. Não é motivação vazia — é estratégia. Consegui um aumento de 35% e uma promoção a Director em menos de um ano."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">RN</div>
-            <div>
-              <strong>Ricardo N.</strong>
-              <span>Director Comercial · FMCG</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"O programa de Executive Presence transformou a forma como me apresento em reuniões de board. Ganhei visibilidade e confiança que nunca tinha tido noutros programas de formação."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">AS</div>
-            <div>
-              <strong>Ana S.</strong>
-              <span>VP Marketing · Consultora Internacional</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>"O trabalho de LinkedIn foi absolutamente transformador. Em 3 meses passei de 800 a 12.000 seguidores e recebi inbound de duas empresas Fortune 500."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">JP</div>
-            <div>
-              <strong>João P.</strong>
-              <span>Senior Manager · Big Four</span>
-            </div>
-          </div>
-        </div>
-
+        <div class="testimonial-card"><div class="stars">★★★★★</div><blockquote data-i18n="t1_quote">"In 6 months I went from Team Lead to Head of Operations. Diogo gave me the tools I needed to position myself correctly and communicate my value to leadership."</blockquote><div class="testimonial-author"><div class="author-avatar">MC</div><div><strong data-i18n="t1_name">Marta C.</strong><span data-i18n="t1_role">Head of Operations · Fintech</span></div></div></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><blockquote data-i18n="t2_quote">"The scientific approach made all the difference. It's not empty motivation — it's strategy. I got a 35% pay rise and a promotion to Director in less than a year."</blockquote><div class="testimonial-author"><div class="author-avatar">RN</div><div><strong data-i18n="t2_name">Ricardo N.</strong><span data-i18n="t2_role">Commercial Director · FMCG</span></div></div></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><blockquote data-i18n="t3_quote">"The Executive Presence program transformed how I present myself in board meetings. I gained visibility and confidence I never had with other training programs."</blockquote><div class="testimonial-author"><div class="author-avatar">AS</div><div><strong data-i18n="t3_name">Ana S.</strong><span data-i18n="t3_role">VP Marketing · International Consultancy</span></div></div></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><blockquote data-i18n="t4_quote">"The LinkedIn work was absolutely transformative. In 3 months I went from 800 to 12,000 followers and received inbound from two Fortune 500 companies."</blockquote><div class="testimonial-author"><div class="author-avatar">JP</div><div><strong data-i18n="t4_name">João P.</strong><span data-i18n="t4_role">Senior Manager · Big Four</span></div></div></div>
       </div>
     </div>
   </section>
@@ -351,44 +242,23 @@
   <!-- BLOG -->
   <section id="blog" class="blog">
     <div class="container">
-      <p class="section-eyebrow center">Insights</p>
-      <h2 class="section-title center">Conhecimento que acelera carreiras</h2>
+      <p class="section-eyebrow center" data-i18n="blog_eyebrow">Insights</p>
+      <h2 class="section-title center"  data-i18n="blog_h2">Knowledge that accelerates careers</h2>
       <div class="blog-grid">
-
-        <article class="blog-card">
-          <div class="blog-tag">Liderança</div>
-          <h3>O que a ciência de Goleman nos diz sobre líderes que sobem mais rápido</h3>
-          <p>Inteligência emocional não é soft skill — é o preditor número um de sucesso executivo em organizações de alta complexidade.</p>
-          <a href="#" class="blog-link">Ler artigo →</a>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-tag">Carreira</div>
-          <h3>A Matriz de Impacto × Esforço aplicada à sua progressão de carreira</h3>
-          <p>Como priorizar iniciativas de visibilidade interna com critérios matemáticos — e parar de trabalhar muito sem ser visto.</p>
-          <a href="#" class="blog-link">Ler artigo →</a>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-tag">LinkedIn</div>
-          <h3>Como usar LinkedIn para ser descoberto pela direção antes de pedir promoção</h3>
-          <p>Estratégia de conteúdo e posicionamento digital para managers que querem ser vistos como líderes de pensamento.</p>
-          <a href="#" class="blog-link">Ler artigo →</a>
-        </article>
-
+        <article class="blog-card"><div class="blog-tag" data-i18n="b1_tag">Leadership</div><h3 data-i18n="b1_title">What Goleman's science tells us about leaders who rise faster</h3><p data-i18n="b1_text">Emotional intelligence is not a soft skill — it's the number one predictor of executive success in high-complexity organisations.</p><a href="#" class="blog-link" data-i18n="b1_link">Read article →</a></article>
+        <article class="blog-card"><div class="blog-tag" data-i18n="b2_tag">Career</div><h3 data-i18n="b2_title">The Impact × Effort Matrix applied to your career progression</h3><p data-i18n="b2_text">How to prioritise internal visibility initiatives with mathematical criteria — and stop working hard without being seen.</p><a href="#" class="blog-link" data-i18n="b2_link">Read article →</a></article>
+        <article class="blog-card"><div class="blog-tag" data-i18n="b3_tag">LinkedIn</div><h3 data-i18n="b3_title">How to use LinkedIn to be discovered by leadership before asking for a promotion</h3><p data-i18n="b3_text">Content strategy and digital positioning for managers who want to be seen as thought leaders.</p><a href="#" class="blog-link" data-i18n="b3_link">Read article →</a></article>
       </div>
-      <div class="blog-cta">
-        <a href="#" class="btn-outline">Ver todos os artigos</a>
-      </div>
+      <div class="blog-cta"><a href="#" class="btn-outline" data-i18n="blog_all">View all articles</a></div>
     </div>
   </section>
 
   <!-- CTA BANNER -->
   <section class="cta-banner">
     <div class="container">
-      <h2>Pronto para acelerar a sua carreira?</h2>
-      <p>A próxima promoção não vai acontecer por acidente. Vamos construir uma estratégia.</p>
-      <a href="#contact" class="btn-primary large">Marcar Discovery Call Gratuita</a>
+      <h2 data-i18n="cta_h2">Ready to accelerate your career?</h2>
+      <p  data-i18n="cta_sub">Your next promotion won't happen by accident. Let's build a strategy.</p>
+      <a href="#contact" class="btn-primary large" data-i18n="cta_btn">Book a Free Discovery Call</a>
     </div>
   </section>
 
@@ -396,58 +266,49 @@
   <section id="contact" class="contact">
     <div class="container contact-grid">
       <div class="contact-info">
-        <p class="section-eyebrow">Contacto</p>
-        <h2 class="section-title">Vamos começar<br />com uma conversa.</h2>
-        <p>A Discovery Call é gratuita, dura 30 minutos e é o primeiro passo para perceber se trabalhamos bem juntos. Sem compromisso, sem pressão.</p>
+        <p class="section-eyebrow" data-i18n="ct_eyebrow">Contact</p>
+        <h2 class="section-title"  data-i18n="ct_h2">Let's start<br />with a conversation.</h2>
+        <p data-i18n="ct_text">The Discovery Call is free, lasts 30 minutes and is the first step to understanding if we work well together. No commitment, no pressure.</p>
         <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <span>diogo@ferreira.coach</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">💼</span>
-            <span>linkedin.com/in/diogoferreira</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span>Lisboa, Portugal · Online worldwide</span>
-          </div>
+          <div class="contact-item"><span class="contact-icon">📧</span><span>diogo@ferreira.coach</span></div>
+          <div class="contact-item"><span class="contact-icon">💼</span><span>linkedin.com/in/diogoferreira</span></div>
+          <div class="contact-item"><span class="contact-icon">📍</span><span data-i18n="ct_location">Lisbon, Portugal · Online worldwide</span></div>
         </div>
       </div>
       <div class="contact-form-wrap">
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Nome *</label>
-              <input type="text" id="name" name="name" placeholder="O seu nome" required />
+              <label for="name" data-i18n="f_name">Full Name *</label>
+              <input type="text" id="name" name="name" data-i18n-placeholder="f_name_ph" placeholder="Your name" required />
             </div>
             <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" placeholder="email@empresa.com" required />
+              <label for="email" data-i18n="f_email">Email *</label>
+              <input type="email" id="email" name="email" data-i18n-placeholder="f_email_ph" placeholder="email@company.com" required />
             </div>
           </div>
           <div class="form-group">
-            <label for="role">Cargo atual *</label>
-            <input type="text" id="role" name="role" placeholder="Ex: Senior Manager, Team Lead..." required />
+            <label for="role" data-i18n="f_role">Current role *</label>
+            <input type="text" id="role" name="role" data-i18n-placeholder="f_role_ph" placeholder="E.g. Senior Manager, Team Lead..." required />
           </div>
           <div class="form-group">
-            <label for="goal">O que quer alcançar?</label>
+            <label for="goal" data-i18n="f_goal">What do you want to achieve?</label>
             <select id="goal" name="goal">
-              <option value="">Selecione o seu objetivo</option>
-              <option>Promoção para Head / Director</option>
-              <option>Melhorar presença executiva</option>
-              <option>Visibilidade e autoridade no LinkedIn</option>
-              <option>Mudar de empresa com progressão</option>
-              <option>Melhorar comunicação e influência</option>
-              <option>Outro</option>
+              <option value="" data-i18n="f_goal_ph">Select your goal</option>
+              <option data-i18n="f_g1">Promotion to Head / Director</option>
+              <option data-i18n="f_g2">Improve executive presence</option>
+              <option data-i18n="f_g3">Visibility and authority on LinkedIn</option>
+              <option data-i18n="f_g4">Change company with progression</option>
+              <option data-i18n="f_g5">Improve communication and influence</option>
+              <option data-i18n="f_g6">Other</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" rows="4" placeholder="Conte-me brevemente a sua situação atual..."></textarea>
+            <label for="message" data-i18n="f_msg">Message</label>
+            <textarea id="message" name="message" rows="4" data-i18n-placeholder="f_msg_ph" placeholder="Briefly tell me your current situation..."></textarea>
           </div>
-          <button type="submit" class="btn-primary full">Enviar pedido de Discovery Call</button>
-          <p class="form-note">Resposta garantida em 24 horas. 100% confidencial.</p>
+          <button type="submit" class="btn-primary full" data-i18n="f_submit">Send Discovery Call request</button>
+          <p class="form-note" data-i18n="f_note">Reply guaranteed within 24 hours. 100% confidential.</p>
         </form>
       </div>
     </div>
@@ -459,41 +320,42 @@
       <div class="footer-brand">
         <a href="#home" class="logo">Diogo<span>Ferreira</span></a>
         <p>Senior Executive Career Strategist</p>
-        <p>Lisboa, Portugal · Online worldwide</p>
+        <p data-i18n="ct_location">Lisbon, Portugal · Online worldwide</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h5>Navegação</h5>
+          <h5 data-i18n="ft_nav">Navigation</h5>
           <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#science">Metodologia</a></li>
-            <li><a href="#testimonials">Resultados</a></li>
-            <li><a href="#blog">Insights</a></li>
+            <li><a href="#about"        data-i18n="nav_about">About</a></li>
+            <li><a href="#services"     data-i18n="nav_services">Services</a></li>
+            <li><a href="#science"      data-i18n="nav_methodology">Methodology</a></li>
+            <li><a href="#testimonials" data-i18n="nav_results">Results</a></li>
+            <li><a href="#blog"         data-i18n="nav_insights">Insights</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Programas</h5>
+          <h5 data-i18n="ft_prog">Programs</h5>
           <ul>
-            <li><a href="#services">Career Acceleration</a></li>
-            <li><a href="#services">Executive Presence</a></li>
-            <li><a href="#services">Corporate Workshops</a></li>
+            <li><a href="#services" data-i18n="s1_title">Career Acceleration</a></li>
+            <li><a href="#services" data-i18n="s2_title">Executive Presence Upgrade</a></li>
+            <li><a href="#services" data-i18n="s3_title">Corporate Workshops</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Legal</h5>
+          <h5 data-i18n="ft_legal">Legal</h5>
           <ul>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Termos e Condições</a></li>
+            <li><a href="#" data-i18n="ft_privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="ft_terms">Terms &amp; Conditions</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Diogo Ferreira Executive Coaching. Todos os direitos reservados.</p>
+      <p data-i18n="ft_copy">© 2025 Diogo Ferreira Executive Coaching. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

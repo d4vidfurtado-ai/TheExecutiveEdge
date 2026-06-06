@@ -1,4 +1,73 @@
 /* ============================================================
+   i18n — LANGUAGE SWITCHER
+   ============================================================ */
+const LANG_FLAGS = { en: '🇬🇧', pt: '🇵🇹', es: '🇪🇸', fr: '🇫🇷' };
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function applyLang(lang) {
+  const t = translations[lang];
+  if (!t) return;
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+
+  // text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+
+  // innerHTML (supports <strong> etc.)
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  // placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+  });
+
+  // update switcher button
+  document.getElementById('langFlag').textContent = LANG_FLAGS[lang];
+  document.getElementById('langCode').textContent = lang.toUpperCase();
+
+  // highlight active language in dropdown
+  document.querySelectorAll('.lang-dropdown button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+// Dropdown open/close
+const langSwitcher = document.getElementById('langSwitcher');
+const langToggle   = document.getElementById('langToggle');
+const langDropdown = document.getElementById('langDropdown');
+
+langToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const isOpen = langSwitcher.classList.toggle('open');
+  langToggle.setAttribute('aria-expanded', isOpen);
+});
+
+document.addEventListener('click', () => {
+  langSwitcher.classList.remove('open');
+  langToggle.setAttribute('aria-expanded', false);
+});
+
+langDropdown.querySelectorAll('button[data-lang]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    applyLang(btn.dataset.lang);
+    langSwitcher.classList.remove('open');
+  });
+});
+
+// Apply saved/default language on load
+applyLang(currentLang);
+
+/* ============================================================
    NAVBAR — scroll effect
    ============================================================ */
 const navbar = document.getElementById('navbar');
