@@ -109,7 +109,7 @@ const translations = {
     // Footer
     ft_nav: "Navigation", ft_prog: "Programs", ft_legal: "Legal",
     ft_privacy: "Privacy Policy", ft_terms: "Terms & Conditions",
-    ft_copy: "© 2025 Diogo Ferreira Executive Coaching. All rights reserved.",
+    ft_copy: "© 2025 The Executive Edge. All rights reserved.",
   },
 
   /* ══════════════════════════════════════════════════
@@ -205,7 +205,7 @@ const translations = {
     f_note: "Resposta garantida em 24 horas. 100% confidencial.",
     ft_nav: "Navegação", ft_prog: "Programas", ft_legal: "Legal",
     ft_privacy: "Política de Privacidade", ft_terms: "Termos e Condições",
-    ft_copy: "© 2025 Diogo Ferreira Executive Coaching. Todos os direitos reservados.",
+    ft_copy: "© 2025 The Executive Edge. Todos os direitos reservados.",
   },
 
   /* ══════════════════════════════════════════════════
@@ -301,7 +301,7 @@ const translations = {
     f_note: "Respuesta garantizada en 24 horas. 100% confidencial.",
     ft_nav: "Navegación", ft_prog: "Programas", ft_legal: "Legal",
     ft_privacy: "Política de Privacidad", ft_terms: "Términos y Condiciones",
-    ft_copy: "© 2025 Diogo Ferreira Executive Coaching. Todos los derechos reservados.",
+    ft_copy: "© 2025 The Executive Edge. Todos los derechos reservados.",
   },
 
   /* ══════════════════════════════════════════════════
@@ -397,6 +397,6 @@ const translations = {
     f_note: "Réponse garantie sous 24 heures. 100% confidentiel.",
     ft_nav: "Navigation", ft_prog: "Programmes", ft_legal: "Légal",
     ft_privacy: "Politique de Confidentialité", ft_terms: "Conditions Générales",
-    ft_copy: "© 2025 Diogo Ferreira Executive Coaching. Tous droits réservés.",
+    ft_copy: "© 2025 The Executive Edge. Tous droits réservés.",
   }
 };
