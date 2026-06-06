@@ -395,30 +395,48 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: clamp(3rem, 6vw, 6rem);
-  align-items: center;
+  align-items: start;
 }
 
+.about-img-outer {
+  position: relative;
+  max-width: 380px;
+  padding-bottom: 2rem; /* space for the overflowing badge */
+}
 .about-img-wrap {
   position: relative;
   aspect-ratio: 3/4;
-  max-width: 380px;
   border-radius: var(--r-lg);
-  overflow: visible;
+  overflow: hidden;
 }
-.about-img-placeholder {
+/* Premium executive photo with brand overlay */
+.about-photo {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--navy), #0d2050);
+  object-fit: cover;
+  object-position: center top;
+  display: block;
   border-radius: var(--r-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 4rem;
-  font-weight: 700;
-  color: rgba(212,175,55,.4);
-  letter-spacing: .1em;
-  aspect-ratio: 3/4;
+  filter: brightness(.88) contrast(1.05);
+  transition: transform .6s ease, filter .4s ease;
+}
+.about-img-wrap:hover .about-photo {
+  transform: scale(1.03);
+  filter: brightness(.92) contrast(1.05);
+}
+/* Subtle navy brand overlay */
+.about-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,26,63,.08) 0%,
+    rgba(10,26,63,.0) 40%,
+    rgba(10,26,63,.35) 100%
+  );
+  pointer-events: none;
+  border-radius: var(--r-lg);
 }
 .about-badge {
   position: absolute;
@@ -430,7 +448,8 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 24px rgba(212,175,55,.35);
+  z-index: 2;
 }
 .badge-num {
   font-family: var(--font-serif);
