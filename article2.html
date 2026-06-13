@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Horizon Career Strategy | The Executive Edge</title>
+  <meta name="description" content="Engineering your trajectory across 1, 3, and 5 years using Schein's Career Anchors, OKRs, and Career Capital Theory." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .article-hero { background: linear-gradient(135deg, var(--navy) 0%, rgba(10,26,63,.95) 100%); padding: 6rem 0 4rem; position: relative; overflow: hidden; }
+    .article-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(212,175,55,.06) 0%, transparent 70%); pointer-events: none; }
+    .article-hero-content { position: relative; z-index: 1; }
+    .article-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3.4rem); color: var(--white); line-height: 1.15; margin-bottom: 1.25rem; }
+    .article-hero h1 em { color: var(--gold); font-style: italic; }
+    .article-meta { display: flex; gap: 2rem; flex-wrap: wrap; color: rgba(255,255,255,.6); font-size: .95rem; margin-bottom: 1rem; }
+    .article-meta-item { display: flex; align-items: center; gap: .5rem; }
+    .article-meta-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+    .article-subtitle { font-size: 1.15rem; color: rgba(255,255,255,.65); max-width: 640px; line-height: 1.7; }
+    .article-content { background: var(--white); padding: 5rem 0; }
+    .article-body { max-width: 820px; margin: 0 auto; font-size: 1rem; line-height: 1.8; color: var(--gray4); }
+    .article-section { margin-bottom: 3.5rem; }
+    .article-section h2 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--navy); margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 2px solid var(--gold); }
+    .article-section h3 { font-family: var(--font-serif); font-size: 1.25rem; color: var(--navy); margin: 1.75rem 0 .75rem; }
+    .article-section p { margin-bottom: 1rem; }
+    .article-section ul { list-style: none; margin: 1.25rem 0; }
+    .article-section li { padding: .5rem 0 .5rem 2rem; position: relative; }
+    .article-section li::before { content: ''; position: absolute; left: 0; top: .75rem; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
+    .article-section strong { color: var(--navy); font-weight: 600; }
+    .article-infographic { background: linear-gradient(135deg, rgba(10,26,63,.04) 0%, rgba(212,175,55,.04) 100%); border: 1px solid var(--gray2); border-radius: var(--r-lg); padding: 2.5rem; margin: 2.5rem 0; text-align: center; }
+    .article-infographic h4 { font-family: var(--font-serif); font-size: 1.15rem; color: var(--navy); margin-bottom: 1.5rem; }
+    .horizon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .horizon-card { background: var(--white); border: 2px solid var(--gray2); border-radius: var(--r-md); padding: 1.5rem; text-align: center; }
+    .horizon-card.h1 { border-color: var(--gold); }
+    .horizon-card.h2 { border-color: #9B7E5A; }
+    .horizon-card.h3 { border-color: #4A6FA5; }
+    .horizon-label { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+    .horizon-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--navy); margin-bottom: .75rem; font-weight: 700; }
+    .horizon-desc { font-size: .85rem; color: var(--gray4); line-height: 1.6; }
+    .codeblock { background: var(--navy); color: var(--gold); padding: 2rem; border-radius: var(--r-md); font-family: 'Monaco', 'Courier New', monospace; font-size: .9rem; line-height: 1.8; overflow-x: auto; margin: 1.75rem 0; }
+    .article-cta { background: var(--off); padding: 4rem 0; text-align: center; }
+    .article-cta h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--navy); margin-bottom: 1rem; }
+    .article-cta p { font-size: 1.05rem; color: var(--gray4); max-width: 560px; margin: 0 auto 2rem; line-height: 1.7; }
+    @media (max-width: 768px) { .horizon-grid { grid-template-columns: 1fr; } .article-hero { padding: 4rem 0 3rem; } .article-content { padding: 3rem 0; } }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">The Executive<span> Edge</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#science">Methodology</a></li>
+        <li><a href="index.html#testimonials">Results</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li>
+          <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" id="langToggle" aria-haspopup="true" aria-expanded="false">
+              <span class="lang-flag" id="langFlag">🇬🇧</span>
+              <span class="lang-code" id="langCode">EN</span>
+              <span class="lang-caret">▾</span>
+            </button>
+            <ul class="lang-dropdown" id="langDropdown" role="menu">
+              <li><button data-lang="en" role="menuitem"><span>🇬🇧</span> English</button></li>
+              <li><button data-lang="pt" role="menuitem"><span>🇵🇹</span> Português</button></li>
+              <li><button data-lang="es" role="menuitem"><span>🇪🇸</span> Español</button></li>
+              <li><button data-lang="fr" role="menuitem"><span>🇫🇷</span> Français</button></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="index.html#contact" class="btn-nav">Discovery Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero-content">
+        <div class="article-meta">
+          <div class="article-meta-item"><span class="article-meta-dot"></span>Career Strategy</div>
+          <div class="article-meta-item"><span class="article-meta-dot"></span>10 min read</div>
+        </div>
+        <h1>Multi‑Horizon Career Strategy: Engineering Your <em>1, 3 & 5 Year</em> Trajectory</h1>
+        <p class="article-subtitle">Integrating Schein's Career Anchors, OKRs, and Career Capital Theory into a measurable, compounding roadmap</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-content">
+    <div class="container">
+      <article class="article-body">
+
+        <div class="article-section">
+          <h2>Abstract</h2>
+          <p>Career acceleration is not a linear process — it is a strategic engineering problem. This article presents a multi‑horizon model (1‑year, 3‑year, 5‑year) that integrates Schein's Career Anchors, OKR methodology, and career capital theory to build a personalized, measurable roadmap that compounds over time.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>1. The Problem: Most Careers Lack Strategic Architecture</h2>
+          <p>High‑potentials often rely on:</p>
+          <ul>
+            <li>Opportunistic moves</li>
+            <li>Manager‑driven development</li>
+            <li>Short‑term performance cycles</li>
+          </ul>
+          <p>But career acceleration requires intentional design, not reactive progression.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>2. The Multi‑Horizon Strategy Model</h2>
+
+          <div class="article-infographic">
+            <h4>Three Horizons of Career Architecture</h4>
+            <div class="horizon-grid">
+              <div class="horizon-card h1">
+                <p class="horizon-label">Horizon 1</p>
+                <h5 class="horizon-title">12 Months (Execution)</h5>
+                <p class="horizon-desc">Skills • Visibility • Performance</p>
+              </div>
+              <div class="horizon-card h2">
+                <p class="horizon-label">Horizon 2</p>
+                <h5 class="horizon-title">3 Years (Positioning)</h5>
+                <p class="horizon-desc">Role transitions • Scope expansion</p>
+              </div>
+              <div class="horizon-card h3">
+                <p class="horizon-label">Horizon 3</p>
+                <h5 class="horizon-title">5 Years (Identity)</h5>
+                <p class="horizon-desc">Career identity • Long-term trajectory</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Horizon 1 — 12 Months (Execution Layer)</h3>
+          <p><strong>Focus:</strong> Skill acquisition + visibility + performance</p>
+          <ul>
+            <li>What skills must I acquire now?</li>
+            <li>What projects increase my internal visibility?</li>
+            <li>What behaviors must I upgrade?</li>
+          </ul>
+
+          <h3>Horizon 2 — 3 Years (Positioning Layer)</h3>
+          <p><strong>Focus:</strong> Role transitions + scope expansion</p>
+          <ul>
+            <li>What role do I want to hold in 36 months?</li>
+            <li>What leadership capabilities must I demonstrate?</li>
+            <li>What strategic relationships must I build?</li>
+          </ul>
+
+          <h3>Horizon 3 — 5 Years (Identity Layer)</h3>
+          <p><strong>Focus:</strong> Career identity + long‑term trajectory</p>
+          <ul>
+            <li>Who am I becoming professionally?</li>
+            <li>What is my leadership brand?</li>
+            <li>What career capital must I accumulate?</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>3. Integrating Schein's Career Anchors</h2>
+          <p>Schein identifies 8 anchors (e.g., managerial competence, autonomy, service, challenge). Your anchors determine:</p>
+          <ul>
+            <li>Which roles energize you</li>
+            <li>Which environments you thrive in</li>
+            <li>What trade‑offs you will accept</li>
+          </ul>
+          <p><strong>Anchors → inform → 5‑year identity → informs → 3‑year positioning → informs → 1‑year execution</strong></p>
+        </div>
+
+        <div class="article-section">
+          <h2>4. Applying OKRs to Career Strategy</h2>
+          <p><strong>Objective (O):</strong> A qualitative ambition (e.g., "Become a high‑visibility cross‑functional leader")</p>
+          <p><strong>Key Results (KRs):</strong> Quantitative, measurable indicators (e.g., "Lead 2 strategic projects", "Present to VP‑level stakeholders 5 times")</p>
+          <p><strong>Initiatives:</strong> Actions that drive the KRs</p>
+          <p>This transforms career development from vague intentions into measurable engineering.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>5. Career Capital Compounding</h2>
+          <p><strong>Career capital =</strong></p>
+          <ul>
+            <li>Human capital (skills)</li>
+            <li>Social capital (network)</li>
+            <li>Reputational capital (brand)</li>
+          </ul>
+          <p>The multi‑horizon model ensures all three compound over time.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>6. Schematic Model: Multi‑Horizon Career Engineering</h2>
+          <div class="codeblock">
+5-Year Horizon → Identity & Anchors
+        ↓
+3-Year Horizon → Positioning & Scope Expansion
+        ↓
+1-Year Horizon → Skills, Visibility, Performance
+        ↓
+Quarterly OKRs → Execution Engine
+          </div>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>Career acceleration is predictable when engineered across multiple horizons. By aligning identity, positioning, and execution, professionals build a compounding trajectory that outperforms peers who rely on short‑term performance alone.</p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <section class="article-cta">
+    <div class="container">
+      <h2>Engineer your multi-horizon career strategy</h2>
+      <p>The Executive Edge builds personalized 1, 3, and 5-year roadmaps grounded in career capital theory and OKR methodology. Align your anchors, positioning, and execution into a compounding trajectory.</p>
+      <a href="index.html#contact" class="btn-primary">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">The Executive<span> Edge</span></a>
+        <p>The Executive Edge</p>
+        <p>New York City, USA · London, UK · Paris, France · Madrid, Spain · São Paulo, Brazil</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#science">Methodology</a></li>
+            <li><a href="index.html#testimonials">Results</a></li>
+            <li><a href="insights.html">Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="index.html#services">Career Acceleration</a></li>
+            <li><a href="index.html#services">Executive Presence Upgrade</a></li>
+            <li><a href="index.html#services">Focus Acceleration</a></li>
+            <li><a href="corporate-solutions.html">Corporate Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The Executive Edge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
