@@ -568,5 +568,21 @@
 
   <script src="translations.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Jump directly to anchor without animation when coming from other pages
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        // Temporarily disable smooth scrolling
+        document.documentElement.style.scrollBehavior = 'auto';
+        // Jump to the target
+        target.scrollIntoView();
+        // Re-enable smooth scrolling for same-page navigation
+        setTimeout(() => {
+          document.documentElement.style.scrollBehavior = 'smooth';
+        }, 100);
+      }
+    }
+  </script>
 </body>
 </html>
