@@ -1,4 +1,4 @@
-const translations = {
+﻿const translations = {
 
   /* ══════════════════════════════════════════════════
      ENGLISH  (default)
@@ -23,7 +23,7 @@ const translations = {
     about_p2: "We are not motivational coaches. We are end-to-end career strategists. Every engagement combines evidence-based diagnostics, strategic positioning, executive presence development and deliberate visibility-building into a single, cohesive journey, from first session to career milestone and every horizon in between. Our depth in C-Suite talent valuation means we know exactly what boards and search committees look for, and we engineer our clients to meet and exceed those criteria.",
     about_p3: "Our clients include high-potentials identified in corporate talent valuation processes, fast-track executives at Fortune 500 and Russell 1000 firms, and senior leaders transitioning into the C-Suite. What unites them is the decision to treat their career as a strategic asset, with rigour, precision and a trusted partner by their side.",
     about_cta: "Start your strategy",
-    badge_text: "Years\nC-Level",
+    badge_text: "Years\nArchitecting\nCareers",
     // Value break
     big_quote: "Career success is not a function of effort alone. It is the product of strategic positioning, deliberate visibility and the disciplined execution of a personalised roadmap, engineered for your profile and your ambition.",
     // Services
@@ -164,7 +164,7 @@ const translations = {
     about_p2: "Não somos coaches motivacionais. Somos estrategas de carreira de ponta a ponta. Cada programa combina diagnóstico baseado em evidências, posicionamento estratégico, desenvolvimento de presença executiva e construção deliberada de visibilidade numa jornada única, desde a primeira sessão até ao marco de carreira. A nossa profundidade na valorização de talento C-Suite significa que sabemos exactamente o que conselhos de administração e search committees procuram, e desenvolvemos os nossos clientes para cumprir e superar esses critérios.",
     about_p3: "Os nossos clientes incluem high-potentials identificados em processos de valorização de talento corporativo, executivos em fast-track em empresas Fortune 500 e Russell 1000, e líderes seniores em transição para o C-Suite. O que os une é a decisão de tratar a carreira como um activo estratégico, com rigor, precisão e um parceiro de confiança ao seu lado.",
     about_cta: "Iniciar a minha estratégia",
-    badge_text: "Anos\nC-Level",
+    badge_text: "Anos\nArquitectando\nCarreiras",
     big_quote: "O sucesso na carreira não é apenas uma função do esforço. É o produto do posicionamento estratégico, da visibilidade deliberada e da execução disciplinada de um roadmap personalizado, desenvolvido para o seu perfil e para a sua ambição.",
     services_eyebrow: "Programas Assinatura",
     services_h2: "Estratégias personalizadas.\nTrajectórias mensuráveis.",
@@ -290,7 +290,7 @@ const translations = {
     about_p2: "No somos coaches motivacionales. Somos estrategas de carrera de extremo a extremo. Cada programa combina diagnóstico basado en evidencias, posicionamiento estratégico, desarrollo de presencia ejecutiva y construcción deliberada de visibilidad en un viaje único, desde la primera sesión hasta el hito de carrera. Nuestra profundidad en la valoración del talento C-Suite significa que sabemos exactamente lo que buscan los consejos de administración y los comités de búsqueda, y desarrollamos a nuestros clientes para cumplir y superar esos criterios.",
     about_p3: "Nuestros clientes incluyen high-potentials identificados en procesos corporativos de valoración del talento, ejecutivos en fast-track en empresas Fortune 500 y Russell 1000, y líderes senior en transición hacia el C-Suite. Lo que les une es la decisión de tratar su carrera como un activo estratégico, con rigor, precisión y un socio de confianza a su lado.",
     about_cta: "Comenzar mi estrategia",
-    badge_text: "Años\nC-Level",
+    badge_text: "Años\nArquitectando\nCarreras",
     big_quote: "El éxito en la carrera no es solo una función del esfuerzo. Es el producto del posicionamiento estratégico, la visibilidad deliberada y la ejecución disciplinada de un roadmap personalizado, diseñado para tu perfil y tu ambición.",
     services_eyebrow: "Programas Insignia",
     services_h2: "Estrategias personalizadas.\nTrayectorias medibles.",
@@ -416,7 +416,7 @@ const translations = {
     about_p2: "Nous ne sommes pas des coachs motivationnels. Nous sommes des stratèges de carrière de bout en bout. Chaque programme combine un diagnostic fondé sur les preuves, un positionnement stratégique, le développement de la présence exécutive et la construction délibérée de la visibilité dans un parcours unique, de la première séance au jalon de carrière. Notre profondeur dans l'évaluation des talents C-Suite signifie que nous savons exactement ce que recherchent les conseils d'administration et les comités de recrutement, et nous développons nos clients pour répondre à ces critères et les dépasser.",
     about_p3: "Nos clients comprennent des hauts potentiels identifiés dans des processus d'évaluation des talents d'entreprise, des cadres en fast-track au sein d'entreprises du Fortune 500 et du Russell 1000, et des dirigeants seniors en transition vers le C-Suite. Ce qui les unit, c'est la décision de traiter leur carrière comme un actif stratégique, avec rigueur, précision et un partenaire de confiance à leurs côtés.",
     about_cta: "Commencer ma stratégie",
-    badge_text: "Ans\nC-Level",
+    badge_text: "Ans\nArchitecturant\ndes Carrières",
     big_quote: "Le succès en carrière n'est pas seulement une fonction de l'effort. C'est le produit du positionnement stratégique, de la visibilité délibérée et de l'exécution disciplinée d'une feuille de route personnalisée, conçue pour votre profil et votre ambition.",
     services_eyebrow: "Programmes Signature",
     services_h2: "Stratégies personnalisées.\nTrajectoires mesurables.",
