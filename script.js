@@ -231,6 +231,8 @@ if (form) {
       name: formData.get('name'),
       email: formData.get('email'),
       role: formData.get('role'),
+      country: formData.get('country'),
+      phone: formData.get('phone'),
       goal: formData.get('goal') || null,
       message: formData.get('message') || null
     };
