@@ -209,14 +209,16 @@ const counterObserver = new IntersectionObserver(
 counters.forEach(c => counterObserver.observe(c));
 
 /* ============================================================
-   CONTACT FORM — Formspree submission to contact@theexecutiveedge.com
+   CONTACT FORM — Supabase submission to discovery_calls table
    ============================================================ */
+const SUPABASE_URL = 'https://uknmeyzfmugdzanvmfaa.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrbm1leXpmbXVnZHphbnZtZmFhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzNjE2MzMsImV4cCI6MjA5NjkzNzYzM30.QS_N-kEEU358petOyig9tfP2U0pYQNLGY7T_obMB7K4';
+
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
 
-    const formspreeId = form.dataset.formspreeId;
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
     const t = translations[currentLang] || translations['en'];
@@ -224,11 +226,24 @@ if (form) {
     btn.textContent = t.f_sending || 'Sending…';
     btn.disabled = true;
 
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      role: formData.get('role'),
+      goal: formData.get('goal') || null,
+      message: formData.get('message') || null
+    };
+
     try {
-      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/discovery_calls`, {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form),
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+        },
+        body: JSON.stringify(data)
       });
 
       if (response.ok) {
@@ -245,7 +260,8 @@ if (form) {
       } else {
         throw new Error('Server error');
       }
-    } catch {
+    } catch (error) {
+      console.error('Form submission error:', error);
       btn.textContent = t.f_error || '✗ Something went wrong. Please try again.';
       btn.style.background = '#9b2226';
       btn.style.borderColor = '#9b2226';
