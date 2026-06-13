@@ -2,16 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Homepage -->
   <url>
     <loc>https://theexecutiveedge.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en"       href="https://theexecutiveedge.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="pt"       href="https://theexecutiveedge.com/?lang=pt"/>
-    <xhtml:link rel="alternate" hreflang="es"       href="https://theexecutiveedge.com/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="fr"       href="https://theexecutiveedge.com/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://theexecutiveedge.com/"/>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Insights Page -->
+  <url>
+    <loc>https://theexecutiveedge.com/insights.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 1: Emotional Intelligence -->
+  <url>
+    <loc>https://theexecutiveedge.com/article1.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Article 2: Career Strategy -->
+  <url>
+    <loc>https://theexecutiveedge.com/article2.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Article 3: Digital Authority -->
+  <url>
+    <loc>https://theexecutiveedge.com/article3.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Corporate Solutions -->
+  <url>
+    <loc>https://theexecutiveedge.com/corporate-solutions.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Team Page -->
+  <url>
+    <loc>https://theexecutiveedge.com/team.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
