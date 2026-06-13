@@ -1364,3 +1364,14 @@ ul { list-style: none; }
   border-top: 1px solid var(--gray2);
   padding-top: 1rem;
 }
+
+.faq-methodology {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  background: rgba(212,175,55,.05);
+  border-left: 2px solid var(--gold);
+  font-size: .85rem;
+  color: var(--gray4);
+  line-height: 1.7;
+  font-style: italic;
+}
