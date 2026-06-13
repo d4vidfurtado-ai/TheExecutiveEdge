@@ -209,31 +209,52 @@ const counterObserver = new IntersectionObserver(
 counters.forEach(c => counterObserver.observe(c));
 
 /* ============================================================
-   CONTACT FORM — simple feedback
+   CONTACT FORM — Formspree submission to contact@theexecutiveedge.com
    ============================================================ */
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
 
+    const formspreeId = form.dataset.formspreeId;
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
     const t = translations[currentLang] || translations['en'];
+
     btn.textContent = t.f_sending || 'Sending…';
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.textContent = t.f_sent || '✓ Request sent!';
-      btn.style.background = '#2d6a4f';
-      btn.style.borderColor = '#2d6a4f';
-      btn.style.color = '#fff';
+    try {
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
 
-      setTimeout(() => {
+      if (response.ok) {
+        btn.textContent = t.f_sent || '✓ Request sent!';
+        btn.style.background = '#2d6a4f';
+        btn.style.borderColor = '#2d6a4f';
+        btn.style.color = '#fff';
         form.reset();
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.style.cssText = '';
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      btn.textContent = t.f_error || '✗ Something went wrong. Please try again.';
+      btn.style.background = '#9b2226';
+      btn.style.borderColor = '#9b2226';
+      btn.style.color = '#fff';
+      setTimeout(() => {
         btn.textContent = original;
         btn.style.cssText = '';
         btn.disabled = false;
-      }, 3500);
-    }, 1200);
+      }, 4000);
+    }
   });
 }

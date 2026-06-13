@@ -136,7 +136,7 @@ const translations = {
     faq_q6: "What is the investment for your programs?",
     faq_a6: "The Executive Presence Upgrade starts from €1,500. The Career Acceleration program starts from €2,500. Corporate Workshop pricing is provided via a custom proposal. All programs are positioned as premium, high-ROI engagements — clients consistently report compensation increases that far exceed the program investment.",
     // Form feedback
-    f_sending: "Sending…", f_sent: "✓ Request sent!",
+    f_sending: "Sending…", f_sent: "✓ Request sent!", f_error: "✗ Something went wrong. Please try again.",
   },
 
   /* ══════════════════════════════════════════════════
@@ -256,7 +256,7 @@ const translations = {
     faq_a5: "87% dos nossos clientes alcançam uma promoção ou mudança significativa de cargo em 12 meses. Para além do título, os clientes reportam melhorias mensuráveis em visibilidade executiva, influência com stakeholders, autoridade no LinkedIn e compensação. Todos os resultados são acompanhados através de Career KPIs acordados desde o início do programa.",
     faq_q6: "Qual é o investimento nos vossos programas?",
     faq_a6: "O Executive Presence Upgrade começa a partir de 1.500€. O programa Career Acceleration começa a partir de 2.500€. O preço dos Corporate Workshops é disponibilizado através de proposta personalizada. Todos os programas são posicionados como investimentos premium de alto ROI — os clientes reportam consistentemente aumentos de compensação muito superiores ao investimento no programa.",
-    f_sending: "A enviar…", f_sent: "✓ Pedido enviado!",
+    f_sending: "A enviar…", f_sent: "✓ Pedido enviado!", f_error: "✗ Algo correu mal. Por favor tente novamente.",
   },
 
   /* ══════════════════════════════════════════════════
@@ -376,7 +376,7 @@ const translations = {
     faq_a5: "El 87% de nuestros clientes logra una promoción o cambio significativo de rol en 12 meses. Más allá del título, los clientes reportan mejoras medibles en visibilidad ejecutiva, influencia con stakeholders, autoridad en LinkedIn y compensación. Todos los resultados se siguen a través de KPIs de Carrera acordados desde el inicio de cada programa.",
     faq_q6: "¿Cuál es la inversión para vuestros programas?",
     faq_a6: "El Executive Presence Upgrade comienza desde €1.500. El programa Career Acceleration comienza desde €2.500. El precio de los Corporate Workshops se facilita mediante propuesta personalizada. Todos los programas están posicionados como compromisos premium de alto ROI — los clientes reportan consistentemente aumentos de compensación que superan con creces la inversión en el programa.",
-    f_sending: "Enviando…", f_sent: "✓ ¡Solicitud enviada!",
+    f_sending: "Enviando…", f_sent: "✓ ¡Solicitud enviada!", f_error: "✗ Algo salió mal. Por favor inténtalo de nuevo.",
   },
 
   /* ══════════════════════════════════════════════════
@@ -496,6 +496,6 @@ const translations = {
     faq_a5: "87 % de nos clients obtiennent une promotion ou un changement de rôle significatif en 12 mois. Au-delà du titre, les clients rapportent des améliorations mesurables en visibilité exécutive, influence avec les parties prenantes, autorité LinkedIn et rémunération. Tous les résultats sont suivis via des KPIs de Carrière convenus dès le début de chaque programme.",
     faq_q6: "Quel est l'investissement pour vos programmes ?",
     faq_a6: "L'Executive Presence Upgrade commence à partir de 1 500 €. Le programme Career Acceleration commence à partir de 2 500 €. Le tarif des Corporate Workshops est fourni via une proposition personnalisée. Tous les programmes sont positionnés comme des engagements premium à haut ROI — les clients rapportent systématiquement des augmentations de rémunération bien supérieures à l'investissement du programme.",
-    f_sending: "Envoi en cours…", f_sent: "✓ Demande envoyée !",
+    f_sending: "Envoi en cours…", f_sent: "✓ Demande envoyée !", f_error: "✗ Une erreur s'est produite. Veuillez réessayer.",
   }
 };
