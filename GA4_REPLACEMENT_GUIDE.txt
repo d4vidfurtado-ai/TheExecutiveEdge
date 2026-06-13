@@ -1,0 +1,45 @@
+GOOGLE ANALYTICS 4 - MEASUREMENT ID REPLACEMENT GUIDE
+
+STATUS: GA4 CODE ADDED TO ALL 7 FILES
+
+FILES UPDATED:
+✓ index.html
+✓ article1.html
+✓ article2.html
+✓ article3.html
+✓ corporate-solutions.html
+✓ insights.html
+✓ team.html
+
+STEP 1: GET YOUR MEASUREMENT ID
+1. Go to https://analytics.google.com/
+2. Create new account or sign in
+3. Create new property: https://theexecutiveedge.com
+4. Copy your Measurement ID (format: G-ABC1234DEF)
+
+STEP 2: REPLACE PLACEHOLDER IN ALL FILES
+Find & Replace in all HTML files:
+Find:    G-XXXXXXXXXX
+Replace: G-ABC1234DEF (your actual ID)
+
+STEP 3: VERIFY
+After replacement, each file should have your actual ID in:
+- gtag script src URL
+- gtag config call
+
+STEP 4: DEPLOY
+Upload all modified HTML files to your server
+
+STEP 5: VERIFY IN BROWSER
+1. Visit https://theexecutiveedge.com
+2. Open DevTools (F12)
+3. Console should show GA initialization
+4. In GA dashboard: Data Streams > Status should be "Collecting data"
+
+EXPECTED RESULTS:
+- First data appears in GA4 within 24-48 hours
+- Real-time visitors visible immediately
+- Can link to Google Search Console
+- Track all page views and user behavior
+
+Your placeholder code is ready - just swap out the Measurement ID!
