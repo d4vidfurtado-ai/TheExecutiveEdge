@@ -83,12 +83,12 @@ const hamburger = document.getElementById('hamburger');
 const mobileNav = document.createElement('div');
 mobileNav.classList.add('mobile-nav');
 mobileNav.innerHTML = `
-  <a href="#about">Sobre</a>
-  <a href="#services">Serviços</a>
-  <a href="#science">Metodologia</a>
-  <a href="#testimonials">Resultados</a>
-  <a href="#blog">Insights</a>
-  <a href="#contact" class="btn-nav">Discovery Call</a>
+  <a href="#about"        data-i18n="nav_about">About</a>
+  <a href="#services"     data-i18n="nav_services">Services</a>
+  <a href="#science"      data-i18n="nav_methodology">Methodology</a>
+  <a href="#testimonials" data-i18n="nav_results">Results</a>
+  <a href="#blog"         data-i18n="nav_insights">Insights</a>
+  <a href="#contact" class="btn-nav" data-i18n="nav_cta">Discovery Call</a>
 `;
 document.body.appendChild(mobileNav);
 
@@ -218,11 +218,12 @@ if (form) {
 
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
-    btn.textContent = 'A enviar...';
+    const t = translations[currentLang] || translations['en'];
+    btn.textContent = t.f_sending || 'Sending…';
     btn.disabled = true;
 
     setTimeout(() => {
-      btn.textContent = '✓ Pedido enviado!';
+      btn.textContent = t.f_sent || '✓ Request sent!';
       btn.style.background = '#2d6a4f';
       btn.style.borderColor = '#2d6a4f';
       btn.style.color = '#fff';
