@@ -525,7 +525,7 @@ ul { list-style: none; }
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 3.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .service-card {
@@ -535,6 +535,8 @@ ul { list-style: none; }
   border: 1px solid var(--gray2);
   position: relative;
   transition: transform .25s, box-shadow .25s;
+  display: flex;
+  flex-direction: column;
 }
 .service-card:hover {
   transform: translateY(-4px);
@@ -562,8 +564,9 @@ ul { list-style: none; }
 }
 
 .service-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
 }
 .service-card h3 {
   font-family: var(--font-serif);
@@ -590,6 +593,7 @@ ul { list-style: none; }
 
 .service-list {
   margin-bottom: 2rem;
+  flex: 1;
 }
 .service-list li {
   font-size: .88rem;
@@ -677,7 +681,7 @@ ul { list-style: none; }
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
-.fw-icon { font-size: 1.75rem; margin-bottom: .75rem; }
+.fw-icon { margin-bottom: .75rem; display: flex; align-items: center; }
 .framework-item h5 {
   font-weight: 700;
   font-size: .95rem;
@@ -898,7 +902,7 @@ ul { list-style: none; }
   font-size: .95rem;
   color: var(--navy);
 }
-.contact-icon { font-size: 1.1rem; flex-shrink: 0; }
+.contact-icon { flex-shrink: 0; display: flex; align-items: center; }
 
 .contact-form-wrap {
   background: var(--white);
