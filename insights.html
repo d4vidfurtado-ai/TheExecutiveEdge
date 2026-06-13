@@ -359,16 +359,29 @@
     }
     .cov-row {
       display: grid;
-      grid-template-columns: 3.5rem 1px 1fr 1px 2.4fr;
+      grid-template-columns: 3.5rem 1px 1fr 1px 2.4fr 2.5rem;
       align-items: stretch;
       border-bottom: 1px solid rgba(255,255,255,.1);
       transition: background .2s;
-      cursor: default;
+      cursor: pointer;
+      text-decoration: none;
     }
     .cov-row:hover {
-      background: rgba(212,175,55,.06);
+      background: rgba(212,175,55,.07);
     }
     .cov-row:hover .cov-num { color: var(--gold); }
+    .cov-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.2);
+      font-size: 1rem;
+      transition: color .2s, transform .2s;
+    }
+    .cov-row:hover .cov-arrow {
+      color: var(--gold);
+      transform: translateX(3px);
+    }
     .cov-col-num {
       display: flex;
       align-items: center;
@@ -511,85 +524,95 @@
 
       <div class="cov-table">
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-01">
           <div class="cov-col-num"><span class="cov-num">01</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Leadership Development &amp; Future-Ready Skills</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>How AI disruption, digital transformation and evolving workforce dynamics are reshaping the skills and behaviours required for sustained leadership effectiveness.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-02">
           <div class="cov-col-num"><span class="cov-num">02</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Evidence-Based Leadership &amp; Management</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>The case for grounding every leadership and people-management decision in empirical research, organisational data and practitioner knowledge rather than intuition.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-03">
           <div class="cov-col-num"><span class="cov-num">03</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Transformational Leadership &amp; Organisational Performance</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>Why transformational leadership styles built on vision, emotional intelligence and individual consideration consistently outperform transactional alternatives across industries.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-04">
           <div class="cov-col-num"><span class="cov-num">04</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Organisational Career Growth (OCG)</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>The five-domain model connecting personal traits, organisational support, work emotions, career behaviours and job performance to individual career progression.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-05">
           <div class="cov-col-num"><span class="cov-num">05</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Skills for Senior Executives &amp; Executive Presence</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>The cross-domain capabilities of strategic thinking, executive presence, political intelligence and digital adaptability that distinguish truly effective senior leaders.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-06">
           <div class="cov-col-num"><span class="cov-num">06</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Employee Engagement &amp; Leadership Effectiveness</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>What drives genuine engagement, as distinct from satisfaction, and the specific leadership behaviours that create psychological safety, intrinsic motivation and high-performance cultures.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-07">
           <div class="cov-col-num"><span class="cov-num">07</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Change Leadership &amp; Organisational Transformation</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>Why most transformations fail at the human layer and how leaders can build change readiness, manage resistance and sustain momentum through deep organisational disruption.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-08">
           <div class="cov-col-num"><span class="cov-num">08</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>High-Performing Teams &amp; Collaboration</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>The interaction patterns, structural conditions and leadership behaviours, with psychological safety at their centre, that reliably distinguish elite teams from merely competent ones.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-09">
           <div class="cov-col-num"><span class="cov-num">09</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>Motivation, Work Behaviour &amp; Performance</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>How intrinsic motivation, goal-setting, self-efficacy and flow states interact to produce durable high performance, and why extrinsic incentive structures alone reliably fall short.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
-        <div class="cov-row">
+        <a class="cov-row" href="#cluster-10">
           <div class="cov-col-num"><span class="cov-num">10</span></div>
           <div class="cov-divider"></div>
           <div class="cov-col-title"><h4>AI-Powered Career Growth &amp; Competitive Advantage</h4></div>
           <div class="cov-divider"></div>
           <div class="cov-col-desc"><p>How executives who deliberately integrate AI tools into their career strategy, covering positioning, visibility, skill mapping and opportunity intelligence, outpace peers of equivalent talent.</p></div>
-        </div>
+          <div class="cov-arrow">→</div>
+        </a>
 
       </div>
     </div>
@@ -601,7 +624,7 @@
       <div class="clusters-grid">
 
         <!-- Cluster 1 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-01">
           <div class="cluster-header">
             <div class="cluster-num">01</div>
             <div class="cluster-title-wrap">
@@ -628,7 +651,7 @@
         </div>
 
         <!-- Cluster 2 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-02">
           <div class="cluster-header">
             <div class="cluster-num">02</div>
             <div class="cluster-title-wrap">
@@ -655,7 +678,7 @@
         </div>
 
         <!-- Cluster 3 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-03">
           <div class="cluster-header">
             <div class="cluster-num">03</div>
             <div class="cluster-title-wrap">
@@ -681,7 +704,7 @@
         </div>
 
         <!-- Cluster 4 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-04">
           <div class="cluster-header">
             <div class="cluster-num">04</div>
             <div class="cluster-title-wrap">
@@ -707,7 +730,7 @@
         </div>
 
         <!-- Cluster 5 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-05">
           <div class="cluster-header">
             <div class="cluster-num">05</div>
             <div class="cluster-title-wrap">
@@ -734,7 +757,7 @@
         </div>
 
         <!-- Cluster 6 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-06">
           <div class="cluster-header">
             <div class="cluster-num">06</div>
             <div class="cluster-title-wrap">
@@ -760,7 +783,7 @@
         </div>
 
         <!-- Cluster 7 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-07">
           <div class="cluster-header">
             <div class="cluster-num">07</div>
             <div class="cluster-title-wrap">
@@ -787,7 +810,7 @@
         </div>
 
         <!-- Cluster 8 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-08">
           <div class="cluster-header">
             <div class="cluster-num">08</div>
             <div class="cluster-title-wrap">
@@ -813,7 +836,7 @@
         </div>
 
         <!-- Cluster 9 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-09">
           <div class="cluster-header">
             <div class="cluster-num">09</div>
             <div class="cluster-title-wrap">
@@ -840,7 +863,7 @@
         </div>
 
         <!-- Cluster 10 -->
-        <div class="cluster-card">
+        <div class="cluster-card" id="cluster-10">
           <div class="cluster-header">
             <div class="cluster-num">10</div>
             <div class="cluster-title-wrap">
