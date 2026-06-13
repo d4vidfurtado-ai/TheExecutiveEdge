@@ -322,6 +322,73 @@
       line-height: 1.7;
     }
 
+    /* Cluster overview */
+    .cluster-overview {
+      background: var(--off);
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--gray2);
+    }
+    .cluster-overview-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .cluster-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border: 1px solid var(--gray2);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      background: var(--white);
+    }
+    .cov-item {
+      display: flex;
+      gap: 1.1rem;
+      align-items: flex-start;
+      padding: 1.5rem 1.75rem;
+      border-bottom: 1px solid var(--gray2);
+      border-right: 1px solid var(--gray2);
+      transition: background .2s;
+    }
+    .cov-item:hover { background: rgba(212,175,55,.04); }
+    /* remove right border on even items (right column) */
+    .cov-item:nth-child(2n) { border-right: none; }
+    /* remove bottom border on last two items */
+    .cov-item:nth-last-child(-n+2) { border-bottom: none; }
+    .cov-num {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-family: var(--font-serif);
+      font-size: .82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: -.01em;
+      margin-top: .1rem;
+    }
+    .cov-body h4 {
+      font-family: var(--font-serif);
+      font-size: .97rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .35rem;
+      line-height: 1.3;
+    }
+    .cov-body p {
+      font-size: .85rem;
+      color: var(--gray4);
+      line-height: 1.65;
+      margin: 0;
+    }
+
     /* Responsive */
     @media (max-width: 960px) {
       .clusters-grid { grid-template-columns: 1fr; }
@@ -404,6 +471,97 @@
       <p class="section-eyebrow center">Our Scientific Framework</p>
       <h2>Evidence over intuition.<br/>Always.</h2>
       <p>The Executive Edge does not operate on instinct, trends or coaching folklore. Every diagnostic we run, every strategy we build and every recommendation we make is traceable to a body of validated scientific research. The 10 clusters below represent the complete intellectual architecture behind our work.</p>
+    </div>
+  </section>
+
+  <!-- CLUSTER OVERVIEW -->
+  <section class="cluster-overview">
+    <div class="container">
+      <p class="section-eyebrow center">The 10 Clusters at a Glance</p>
+      <h2 class="cluster-overview-title">Our complete knowledge framework</h2>
+      <div class="cluster-overview-grid">
+
+        <div class="cov-item">
+          <span class="cov-num">01</span>
+          <div class="cov-body">
+            <h4>Leadership Development &amp; Future-Ready Skills</h4>
+            <p>How AI disruption, digital transformation and evolving workforce dynamics are reshaping the skills and behaviours required for sustained leadership effectiveness.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">02</span>
+          <div class="cov-body">
+            <h4>Evidence-Based Leadership &amp; Management</h4>
+            <p>The case for grounding every leadership and people-management decision in empirical research, organisational data and practitioner knowledge rather than intuition.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">03</span>
+          <div class="cov-body">
+            <h4>Transformational Leadership &amp; Organisational Performance</h4>
+            <p>Why transformational leadership styles — built on vision, emotional intelligence and individual consideration — consistently outperform transactional alternatives across industries.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">04</span>
+          <div class="cov-body">
+            <h4>Organisational Career Growth (OCG)</h4>
+            <p>The five-domain model connecting personal traits, organisational support, work emotions, career behaviours and job performance to individual career progression.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">05</span>
+          <div class="cov-body">
+            <h4>Skills for Senior Executives &amp; Executive Presence</h4>
+            <p>The cross-domain capabilities — strategic thinking, executive presence, political intelligence and digital adaptability — that distinguish truly effective senior leaders.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">06</span>
+          <div class="cov-body">
+            <h4>Employee Engagement &amp; Leadership Effectiveness</h4>
+            <p>What drives genuine engagement — not satisfaction — and the specific leadership behaviours that create psychological safety, intrinsic motivation and high-performance cultures.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">07</span>
+          <div class="cov-body">
+            <h4>Change Leadership &amp; Organisational Transformation</h4>
+            <p>Why most transformations fail at the human layer and how leaders can build change readiness, manage resistance and sustain momentum through deep organisational disruption.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">08</span>
+          <div class="cov-body">
+            <h4>High-Performing Teams &amp; Collaboration</h4>
+            <p>The interaction patterns, structural conditions and leadership behaviours — particularly psychological safety — that reliably distinguish elite teams from merely competent ones.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">09</span>
+          <div class="cov-body">
+            <h4>Motivation, Work Behaviour &amp; Performance</h4>
+            <p>How intrinsic motivation, goal-setting, self-efficacy and flow states interact to produce durable high performance — and why extrinsic incentive structures alone reliably fall short.</p>
+          </div>
+        </div>
+
+        <div class="cov-item">
+          <span class="cov-num">10</span>
+          <div class="cov-body">
+            <h4>Learning, Development &amp; Continuous Career Growth</h4>
+            <p>How personalised, work-embedded learning compounds career capital over time — and why deliberate development investment creates asymmetric advantages over peers of equivalent talent.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
