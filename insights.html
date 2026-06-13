@@ -322,78 +322,106 @@
       line-height: 1.7;
     }
 
-    /* Cluster overview */
+    /* Cluster overview — McKinsey-style */
     .cluster-overview {
-      background: var(--off);
-      padding: 5rem 0;
-      border-bottom: 1px solid var(--gray2);
+      background: var(--navy);
+      padding: 5.5rem 0 6rem;
+    }
+    .cluster-overview-eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 1rem;
     }
     .cluster-overview-title {
       font-family: var(--font-serif);
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--navy);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--white);
       text-align: center;
-      margin-bottom: 3rem;
-    }
-    .cluster-overview-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0;
-      border: 1px solid var(--gray2);
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      background: var(--white);
-    }
-    .cov-item {
-      display: flex;
-      gap: 1.1rem;
-      align-items: flex-start;
-      padding: 1.5rem 1.75rem;
-      border-bottom: 1px solid var(--gray2);
-      border-right: 1px solid var(--gray2);
-      transition: background .2s;
-    }
-    .cov-item:hover { background: rgba(212,175,55,.04); }
-    /* remove right border on even items (right column) */
-    .cov-item:nth-child(2n) { border-right: none; }
-    /* remove bottom border on last two items */
-    .cov-item:nth-last-child(-n+2) { border-bottom: none; }
-    .cov-num {
-      flex-shrink: 0;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold);
-      font-family: var(--font-serif);
-      font-size: .82rem;
       font-weight: 700;
+      margin-bottom: .75rem;
+      line-height: 1.15;
+    }
+    .cluster-overview-sub {
+      text-align: center;
+      font-size: .95rem;
+      color: rgba(255,255,255,.45);
+      max-width: 520px;
+      margin: 0 auto 3.5rem;
+      line-height: 1.65;
+    }
+    .cov-table {
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .cov-row {
+      display: grid;
+      grid-template-columns: 3.5rem 1px 1fr 1px 2.4fr;
+      align-items: stretch;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      transition: background .2s;
+      cursor: default;
+    }
+    .cov-row:hover {
+      background: rgba(212,175,55,.06);
+    }
+    .cov-row:hover .cov-num { color: var(--gold); }
+    .cov-col-num {
       display: flex;
       align-items: center;
       justify-content: center;
-      letter-spacing: -.01em;
-      margin-top: .1rem;
+      padding: 1.6rem 0;
     }
-    .cov-body h4 {
+    .cov-num {
       font-family: var(--font-serif);
-      font-size: .97rem;
+      font-size: 1rem;
       font-weight: 700;
-      color: var(--navy);
-      margin-bottom: .35rem;
-      line-height: 1.3;
+      color: rgba(255,255,255,.3);
+      letter-spacing: .05em;
+      transition: color .2s;
     }
-    .cov-body p {
-      font-size: .85rem;
-      color: var(--gray4);
-      line-height: 1.65;
+    .cov-divider {
+      background: rgba(255,255,255,.1);
+      width: 1px;
+      align-self: stretch;
+    }
+    .cov-col-title {
+      display: flex;
+      align-items: center;
+      padding: 1.6rem 2rem;
+    }
+    .cov-col-title h4 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
       margin: 0;
     }
+    .cov-col-desc {
+      display: flex;
+      align-items: center;
+      padding: 1.6rem 2rem 1.6rem 2.5rem;
+    }
+    .cov-col-desc p {
+      font-size: .88rem;
+      color: rgba(255,255,255,.5);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .cov-row:hover .cov-col-desc p { color: rgba(255,255,255,.7); }
+    .cov-row:hover .cov-col-title h4 { color: var(--gold); }
 
     /* Responsive */
     @media (max-width: 960px) {
       .clusters-grid { grid-template-columns: 1fr; }
       .insights-application-grid { grid-template-columns: 1fr; }
       .insights-stats-row { gap: 2rem; }
+      .cov-row { grid-template-columns: 2.5rem 1px 1fr; }
+      .cov-divider:nth-child(4), .cov-col-desc { display: none; }
     }
   </style>
 </head>
@@ -477,88 +505,90 @@
   <!-- CLUSTER OVERVIEW -->
   <section class="cluster-overview">
     <div class="container">
-      <p class="section-eyebrow center">The 10 Clusters at a Glance</p>
+      <p class="cluster-overview-eyebrow">The 10 Clusters at a Glance</p>
       <h2 class="cluster-overview-title">Our complete knowledge framework</h2>
-      <div class="cluster-overview-grid">
+      <p class="cluster-overview-sub">Ten scientific domains. One integrated methodology. Each cluster below maps directly to the strategies we build for every client.</p>
 
-        <div class="cov-item">
-          <span class="cov-num">01</span>
-          <div class="cov-body">
-            <h4>Leadership Development &amp; Future-Ready Skills</h4>
-            <p>How AI disruption, digital transformation and evolving workforce dynamics are reshaping the skills and behaviours required for sustained leadership effectiveness.</p>
-          </div>
+      <div class="cov-table">
+
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">01</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Leadership Development &amp; Future-Ready Skills</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>How AI disruption, digital transformation and evolving workforce dynamics are reshaping the skills and behaviours required for sustained leadership effectiveness.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">02</span>
-          <div class="cov-body">
-            <h4>Evidence-Based Leadership &amp; Management</h4>
-            <p>The case for grounding every leadership and people-management decision in empirical research, organisational data and practitioner knowledge rather than intuition.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">02</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Evidence-Based Leadership &amp; Management</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>The case for grounding every leadership and people-management decision in empirical research, organisational data and practitioner knowledge rather than intuition.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">03</span>
-          <div class="cov-body">
-            <h4>Transformational Leadership &amp; Organisational Performance</h4>
-            <p>Why transformational leadership styles built on vision, emotional intelligence and individual consideration consistently outperform transactional alternatives across industries.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">03</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Transformational Leadership &amp; Organisational Performance</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>Why transformational leadership styles built on vision, emotional intelligence and individual consideration consistently outperform transactional alternatives across industries.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">04</span>
-          <div class="cov-body">
-            <h4>Organisational Career Growth (OCG)</h4>
-            <p>The five-domain model connecting personal traits, organisational support, work emotions, career behaviours and job performance to individual career progression.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">04</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Organisational Career Growth (OCG)</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>The five-domain model connecting personal traits, organisational support, work emotions, career behaviours and job performance to individual career progression.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">05</span>
-          <div class="cov-body">
-            <h4>Skills for Senior Executives &amp; Executive Presence</h4>
-            <p>The cross-domain capabilities of strategic thinking, executive presence, political intelligence and digital adaptability that distinguish truly effective senior leaders.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">05</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Skills for Senior Executives &amp; Executive Presence</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>The cross-domain capabilities of strategic thinking, executive presence, political intelligence and digital adaptability that distinguish truly effective senior leaders.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">06</span>
-          <div class="cov-body">
-            <h4>Employee Engagement &amp; Leadership Effectiveness</h4>
-            <p>What drives genuine engagement, as distinct from satisfaction, and the specific leadership behaviours that create psychological safety, intrinsic motivation and high-performance cultures.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">06</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Employee Engagement &amp; Leadership Effectiveness</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>What drives genuine engagement, as distinct from satisfaction, and the specific leadership behaviours that create psychological safety, intrinsic motivation and high-performance cultures.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">07</span>
-          <div class="cov-body">
-            <h4>Change Leadership &amp; Organisational Transformation</h4>
-            <p>Why most transformations fail at the human layer and how leaders can build change readiness, manage resistance and sustain momentum through deep organisational disruption.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">07</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Change Leadership &amp; Organisational Transformation</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>Why most transformations fail at the human layer and how leaders can build change readiness, manage resistance and sustain momentum through deep organisational disruption.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">08</span>
-          <div class="cov-body">
-            <h4>High-Performing Teams &amp; Collaboration</h4>
-            <p>The interaction patterns, structural conditions and leadership behaviours, with psychological safety at their centre, that reliably distinguish elite teams from merely competent ones.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">08</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>High-Performing Teams &amp; Collaboration</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>The interaction patterns, structural conditions and leadership behaviours, with psychological safety at their centre, that reliably distinguish elite teams from merely competent ones.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">09</span>
-          <div class="cov-body">
-            <h4>Motivation, Work Behaviour &amp; Performance</h4>
-            <p>How intrinsic motivation, goal-setting, self-efficacy and flow states interact to produce durable high performance, and why extrinsic incentive structures alone reliably fall short.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">09</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>Motivation, Work Behaviour &amp; Performance</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>How intrinsic motivation, goal-setting, self-efficacy and flow states interact to produce durable high performance, and why extrinsic incentive structures alone reliably fall short.</p></div>
         </div>
 
-        <div class="cov-item">
-          <span class="cov-num">10</span>
-          <div class="cov-body">
-            <h4>AI-Powered Career Growth &amp; Competitive Advantage</h4>
-            <p>How executives who deliberately integrate AI tools into their career strategy, covering positioning, visibility, skill mapping and opportunity intelligence, outpace peers of equivalent talent.</p>
-          </div>
+        <div class="cov-row">
+          <div class="cov-col-num"><span class="cov-num">10</span></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-title"><h4>AI-Powered Career Growth &amp; Competitive Advantage</h4></div>
+          <div class="cov-divider"></div>
+          <div class="cov-col-desc"><p>How executives who deliberately integrate AI tools into their career strategy, covering positioning, visibility, skill mapping and opportunity intelligence, outpace peers of equivalent talent.</p></div>
         </div>
 
       </div>
