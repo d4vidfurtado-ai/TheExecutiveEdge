@@ -662,6 +662,10 @@ ul { list-style: none; }
 }
 .service-card.featured .service-price { color: var(--gold); }
 
+.service-card.fullwidth {
+  grid-column: 1 / -1;
+}
+
 /* ============================================================
    SCIENCE
    ============================================================ */
