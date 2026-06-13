@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Solutions | The Executive Edge — Career Architecture for Teams</title>
+  <meta name="description" content="Enterprise career architecture programmes grounded in 10 domains of peer-reviewed research. Elevate your leadership pipeline and build organisational capacity." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://theexecutiveedge.com/corporate-solutions.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://theexecutiveedge.com/corporate-solutions.html" />
+  <meta property="og:title"       content="Corporate Solutions | The Executive Edge" />
+  <meta property="og:description" content="Career architecture and leadership development for enterprise teams." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Corporate Solutions Page Styles ── */
+    .corp-hero {
+      background: var(--navy);
+      padding: 8rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .corp-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(212,175,55,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .corp-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+    .corp-hero h1 em { font-style: italic; color: var(--gold); }
+    .corp-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.6);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Value Proposition */
+    .corp-value {
+      background: var(--white);
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--gray2);
+    }
+    .corp-value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    .corp-value-item {
+      text-align: center;
+    }
+    .corp-value-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(212,175,55,.1), rgba(10,26,63,.05));
+      border: 1px solid rgba(212,175,55,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .corp-value-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--gold);
+    }
+    .corp-value-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .75rem;
+    }
+    .corp-value-item p {
+      font-size: .95rem;
+      color: var(--gray4);
+      line-height: 1.7;
+    }
+
+    /* Framework Section */
+    .corp-framework {
+      background: var(--off);
+      padding: 5.5rem 0 6rem;
+    }
+    .corp-framework-intro {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .corp-framework-intro h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .corp-framework-intro p {
+      font-size: 1rem;
+      color: var(--gray4);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* Clusters Grid */
+    .corp-clusters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .corp-cluster-card {
+      background: var(--white);
+      border: 1px solid var(--gray2);
+      border-radius: var(--r-lg);
+      padding: 2rem;
+      transition: all .25s;
+    }
+    .corp-cluster-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+    .corp-cluster-header {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+    }
+    .corp-cluster-num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-family: var(--font-serif);
+      font-size: .9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .corp-cluster-body {}
+    .corp-cluster-category {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .2rem;
+    }
+    .corp-cluster-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: .75rem;
+    }
+    .corp-cluster-text {
+      font-size: .88rem;
+      color: var(--gray4);
+      line-height: 1.7;
+    }
+
+    /* Application Section */
+    .corp-application {
+      background: var(--navy);
+      padding: 5.5rem 0 6rem;
+    }
+    .corp-application h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .corp-application h2 em { font-style: italic; color: var(--gold); }
+    .corp-application-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+    .corp-application-text p {
+      color: rgba(255,255,255,.65);
+      font-size: .98rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .corp-impact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .corp-impact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .corp-impact-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      background: rgba(212,175,55,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: .15rem;
+    }
+    .corp-impact-icon::after {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      font-size: .8rem;
+    }
+    .corp-impact-text h4 {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: .25rem;
+    }
+    .corp-impact-text p {
+      font-size: .85rem;
+      color: rgba(255,255,255,.55);
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .corp-cta {
+      background: var(--off);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .corp-cta h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .corp-cta p {
+      font-size: 1rem;
+      color: var(--gray4);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .corp-value-grid { grid-template-columns: 1fr; }
+      .corp-clusters { grid-template-columns: 1fr; }
+      .corp-application-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">The Executive<span> Edge</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about"        data-i18n="nav_about">About</a></li>
+        <li><a href="index.html#services"     data-i18n="nav_services">Services</a></li>
+        <li><a href="index.html#science"      data-i18n="nav_methodology">Methodology</a></li>
+        <li><a href="index.html#testimonials" data-i18n="nav_results">Results</a></li>
+        <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+        <li>
+          <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" id="langToggle" aria-haspopup="true" aria-expanded="false">
+              <span class="lang-flag" id="langFlag">🇬🇧</span>
+              <span class="lang-code" id="langCode">EN</span>
+              <span class="lang-caret">▾</span>
+            </button>
+            <ul class="lang-dropdown" id="langDropdown" role="menu">
+              <li><button data-lang="en" role="menuitem"><span>🇬🇧</span> English</button></li>
+              <li><button data-lang="pt" role="menuitem"><span>🇵🇹</span> Português</button></li>
+              <li><button data-lang="es" role="menuitem"><span>🇪🇸</span> Español</button></li>
+              <li><button data-lang="fr" role="menuitem"><span>🇫🇷</span> Français</button></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="index.html#contact" class="btn-nav" data-i18n="nav_cta">Discovery Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="corp-hero">
+    <div class="container">
+      <h1>Career architecture<br/>for every <em>layer</em> of your organisation.</h1>
+      <p>Elevate your leadership pipeline, strengthen executive bench strength, and build organisational capacity through evidence-based career strategy grounded in 10 domains of peer-reviewed science.</p>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION -->
+  <section class="corp-value">
+    <div class="container">
+      <p class="section-eyebrow center">Why Companies Choose The Executive Edge</p>
+      <h2 class="section-title center">Strategic advantage<br />for your talent ecosystem</h2>
+      <div class="corp-value-grid">
+        <div class="corp-value-item">
+          <div class="corp-value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3>Measurable progression</h3>
+          <p>Track career velocity, role transitions, compensation growth and executive visibility across your pipeline. Career KPIs aligned to business outcomes.</p>
+        </div>
+        <div class="corp-value-item">
+          <div class="corp-value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Leadership pipeline strength</h3>
+          <p>Develop your next generation of leaders with personalised strategies that address gaps in executive presence, strategic thinking and cross-domain capability.</p>
+        </div>
+        <div class="corp-value-item">
+          <div class="corp-value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Retention through purpose</h3>
+          <p>Reduce executive turnover by creating clear, personalised career pathways that align individual ambition with organisational strategy and opportunity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK -->
+  <section class="corp-framework">
+    <div class="container">
+      <div class="corp-framework-intro">
+        <p class="section-eyebrow center">Scientific Foundation</p>
+        <h2>10 Clusters of peer-reviewed research<br />powering every recommendation</h2>
+        <p>Every strategy we architect for your organisation is grounded in 10 domains of evidence-based research. This framework is not generic advice—it is the intellectual architecture behind transformational career progression at the C-Suite level.</p>
+      </div>
+
+      <div class="corp-clusters">
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">01</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Leadership Science</p>
+              <h3 class="corp-cluster-title">Leadership Development & Future-Ready Skills</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">How AI disruption and digital transformation are reshaping the leadership behaviours and capabilities required for sustained executive effectiveness. How organisations can build scalable leadership development that produces measurable skill transfer.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">02</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Management Science</p>
+              <h3 class="corp-cluster-title">Evidence-Based Leadership & Management</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">Why grounding every leadership and talent decision in empirical research, organisational data and practitioner expertise is not a preference but a necessity. How this applies to managerial capability development and strategic decision-making frameworks.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">03</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Organisational Behaviour</p>
+              <h3 class="corp-cluster-title">Transformational Leadership & Organisational Performance</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">Why transformational leadership styles—built on vision, emotional intelligence and individual consideration—consistently outperform transactional alternatives. How emotional intelligence directly predicts executive success across industries.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">04</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Career Science</p>
+              <h3 class="corp-cluster-title">Organisational Career Growth (OCG)</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">The five-domain model of career progression: personal traits, organisational support, work emotions, career behaviours and job performance. How clear career growth pathways reduce turnover and unlock discretionary effort at all levels.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">05</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Executive Science</p>
+              <h3 class="corp-cluster-title">Skills for Senior Executives & Executive Presence</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">The cross-domain capabilities that distinguish truly effective senior leaders: strategic thinking, executive presence, political intelligence, digital adaptability and the capacity to lead through deep uncertainty and organisational change.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">06</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Engagement Science</p>
+              <h3 class="corp-cluster-title">Employee Engagement & Leadership Effectiveness</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">Why employee engagement remains critically low across global organisations despite significant investment. How specific leadership behaviours unlock psychological safety, intrinsic motivation and high-performance cultures.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">07</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Change Science</p>
+              <h3 class="corp-cluster-title">Change Leadership & Organisational Transformation</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">Why most organisational transformations fail at the human layer. How to build change readiness, manage resistance and sustain momentum through AI adoption, digital disruption and deep organisational transformation.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">08</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Team Science</p>
+              <h3 class="corp-cluster-title">High-Performing Teams & Collaboration</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">The interaction patterns, structural conditions and leadership behaviours that reliably distinguish elite teams from merely competent ones. Psychological safety as the foundation for team learning, innovation and high performance.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">09</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Behavioural Science</p>
+              <h3 class="corp-cluster-title">Motivation, Work Behaviour & Performance</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">How intrinsic motivation, goal-setting, self-efficacy and flow states interact to produce durable high performance. Why extrinsic incentive structures alone reliably fall short in unlocking sustained capability and career progression.</p>
+        </div>
+
+        <div class="corp-cluster-card">
+          <div class="corp-cluster-header">
+            <div class="corp-cluster-num">10</div>
+            <div class="corp-cluster-body">
+              <p class="corp-cluster-category">Learning Science</p>
+              <h3 class="corp-cluster-title">Learning, Development & Continuous Career Growth</h3>
+            </div>
+          </div>
+          <p class="corp-cluster-text">How personalised, work-embedded learning compounds career capital over time. Why deliberate development investment creates asymmetric advantages and how to embed learning in your organisational culture.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION -->
+  <section class="corp-application">
+    <div class="container">
+      <div class="corp-application-grid">
+        <div class="corp-application-text">
+          <h2>From research<br />to <em>your strategic advantage</em></h2>
+          <p>The 10 clusters above are not academic abstractions. They are the live intellectual infrastructure behind every career architecture programme we architect for your organisation—translated into personalised diagnostics, leadership pipeline strategies, and measurable career KPIs.</p>
+          <p>When we tell your executives that their strategy is evidence-based, this is the evidence base we mean. Not generic coaching wisdom. Not industry trends. Peer-reviewed science, synthesised into a strategy that is entirely tailored to your organisational culture, strategy and ambition.</p>
+        </div>
+
+        <div class="corp-impact-list">
+          <div class="corp-impact-item">
+            <div class="corp-impact-icon"></div>
+            <div class="corp-impact-text">
+              <h4>Executive diagnostics</h4>
+              <p>360° assessments grounded in Clusters 2, 4 and 6, mapping strengths, positioning gaps and career velocity across your leadership pipeline.</p>
+            </div>
+          </div>
+
+          <div class="corp-impact-item">
+            <div class="corp-impact-icon"></div>
+            <div class="corp-impact-text">
+              <h4>Multi-horizon career architecture</h4>
+              <p>Three-year roadmaps using frameworks from Clusters 1, 5 and 10, aligning immediate needs with strategic pipeline development.</p>
+            </div>
+          </div>
+
+          <div class="corp-impact-item">
+            <div class="corp-impact-icon"></div>
+            <div class="corp-impact-text">
+              <h4>Behavioural transformation</h4>
+              <p>Sustained capability building using Clusters 3, 7 and 9, embedding new leadership behaviours, communication patterns and performance standards.</p>
+            </div>
+          </div>
+
+          <div class="corp-impact-item">
+            <div class="corp-impact-icon"></div>
+            <div class="corp-impact-text">
+              <h4>Organisational momentum</h4>
+              <p>Executive visibility, stakeholder influence and digital authority built using Clusters 8 and 9, tracked via shared Career KPIs aligned to business outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="corp-cta">
+    <div class="container">
+      <p class="section-eyebrow center">Your Next Step</p>
+      <h2>Let's architect your<br/>leadership advantage.</h2>
+      <p>A 60-minute strategy session with our team is the first step. We will map your organisational context, your pipeline gaps, and how evidence-based career architecture translates into measurable strategic advantage.</p>
+      <a href="index.html#contact" class="btn-primary">Request a Strategy Session</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">The Executive<span> Edge</span></a>
+        <p>The Executive Edge</p>
+        <p>New York City, USA · London, UK · Paris, France · Madrid, Spain · São Paulo, Brazil</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5 data-i18n="ft_nav">Navigation</h5>
+          <ul>
+            <li><a href="index.html#about"        data-i18n="nav_about">About</a></li>
+            <li><a href="index.html#services"     data-i18n="nav_services">Services</a></li>
+            <li><a href="index.html#science"      data-i18n="nav_methodology">Methodology</a></li>
+            <li><a href="index.html#testimonials" data-i18n="nav_results">Results</a></li>
+            <li><a href="insights.html"           data-i18n="nav_insights">Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="ft_prog">Programs</h5>
+          <ul>
+            <li><a href="index.html#services" data-i18n="s1_title">Career Acceleration</a></li>
+            <li><a href="index.html#services" data-i18n="s2_title">Executive Presence Upgrade</a></li>
+            <li><a href="index.html#services" data-i18n="s4_title">Focus Acceleration</a></li>
+            <li><a href="corporate-solutions.html">Corporate Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="ft_legal">Legal</h5>
+          <ul>
+            <li><a href="#" data-i18n="ft_privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="ft_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="ft_copy">© 2025 The Executive Edge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.mobile-nav a').forEach(a => {
+      const h = a.getAttribute('href');
+      if (h && h.startsWith('#')) a.setAttribute('href', 'index.html' + h);
+    });
+  </script>
+</body>
+</html>
