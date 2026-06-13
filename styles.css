@@ -220,6 +220,43 @@ ul { list-style: none; }
 }
 
 /* ============================================================
+   BREADCRUMB NAVIGATION
+   ============================================================ */
+.breadcrumb-nav {
+  background: var(--gray1);
+  border-bottom: 1px solid var(--gray2);
+  padding: 1rem 0;
+  margin-top: 60px;
+}
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.breadcrumb-list li {
+  display: inline-flex;
+  align-items: center;
+}
+.breadcrumb-list li:not(:last-child)::after {
+  content: '/';
+  margin: 0 0.5rem;
+  color: var(--gray3);
+}
+.breadcrumb-list a {
+  color: var(--navy);
+  transition: color 0.2s;
+}
+.breadcrumb-list a:hover {
+  color: var(--gold);
+}
+.breadcrumb-list li[aria-current="page"] {
+  color: var(--gray4);
+  font-weight: 500;
+}
+
+/* ============================================================
    HERO
    ============================================================ */
 .hero {
