@@ -9,7 +9,7 @@
     nav_about: "About", nav_services: "Services", nav_methodology: "Methodology",
     nav_results: "Results", nav_insights: "Insights", nav_cta: "Discovery Call",
     // Hero
-    hero_eyebrow: "End-to-End Career Strategy Firm",
+    hero_eyebrow: "Where Ambition Meets Strategy",
     hero_h1: "Your career.", hero_h1_em: "Architected for impact.",
     hero_sub: "End-to-end career strategy for high-potential managers and leaders, personalised to your profile, your ambition and every horizon ahead. We don't motivate. We architect.",
     hero_cta1: "Book a Discovery Call", hero_cta2: "View Programs",
