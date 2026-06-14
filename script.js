@@ -51,9 +51,11 @@ langToggle.addEventListener('click', (e) => {
   langToggle.setAttribute('aria-expanded', isOpen);
 });
 
-document.addEventListener('click', () => {
-  langSwitcher.classList.remove('open');
-  langToggle.setAttribute('aria-expanded', false);
+document.addEventListener('click', (e) => {
+  if (!langSwitcher.contains(e.target)) {
+    langSwitcher.classList.remove('open');
+    langToggle.setAttribute('aria-expanded', false);
+  }
 });
 
 langDropdown.querySelectorAll('button[data-lang]').forEach(btn => {
@@ -216,6 +218,9 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 const form = document.getElementById('contactForm');
 if (form) {
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validatePhone = (phone) => /^\+?[1-9]\d{1,14}$/.test(phone.replace(/\D/g, ''));
+
   form.addEventListener('submit', async e => {
     e.preventDefault();
 
@@ -223,17 +228,57 @@ if (form) {
     const original = btn.textContent;
     const t = translations[currentLang] || translations['en'];
 
+    const email = form.querySelector('#email').value.trim();
+    const phone = form.querySelector('#phone').value.trim();
+    const goal = form.querySelector('#goal').value.trim();
+
+    if (!validateEmail(email)) {
+      btn.textContent = '✗ ' + (t.f_error_email || 'Invalid email');
+      btn.style.background = '#9b2226';
+      btn.style.borderColor = '#9b2226';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.cssText = '';
+      }, 3000);
+      return;
+    }
+
+    if (!validatePhone(phone)) {
+      btn.textContent = '✗ ' + (t.f_error_phone || 'Invalid phone');
+      btn.style.background = '#9b2226';
+      btn.style.borderColor = '#9b2226';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.cssText = '';
+      }, 3000);
+      return;
+    }
+
+    if (!goal) {
+      btn.textContent = '✗ ' + (t.f_error_goal || 'Select a goal');
+      btn.style.background = '#9b2226';
+      btn.style.borderColor = '#9b2226';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.cssText = '';
+      }, 3000);
+      return;
+    }
+
     btn.textContent = t.f_sending || 'Sending…';
     btn.disabled = true;
 
     const formData = new FormData(form);
     const data = {
       name: formData.get('name'),
-      email: formData.get('email'),
+      email: email,
       role: formData.get('role'),
       country: formData.get('country'),
-      phone: formData.get('phone'),
-      goal: formData.get('goal') || null,
+      phone: phone,
+      goal: goal || null,
       message: formData.get('message') || null
     };
 
@@ -263,15 +308,14 @@ if (form) {
         throw new Error('Server error');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
       btn.textContent = t.f_error || '✗ Something went wrong. Please try again.';
       btn.style.background = '#9b2226';
       btn.style.borderColor = '#9b2226';
       btn.style.color = '#fff';
+      btn.disabled = false;
       setTimeout(() => {
         btn.textContent = original;
         btn.style.cssText = '';
-        btn.disabled = false;
       }, 4000);
     }
   });

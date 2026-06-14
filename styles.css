@@ -188,7 +188,7 @@ ul { list-style: none; }
   letter-spacing: .01em;
   white-space: nowrap;
 }
-.logo span { color: var(--gold); }
+.logo span { color: var(--gold2); }
 
 .nav-links {
   display: flex;
@@ -356,7 +356,7 @@ ul { list-style: none; }
 .stat-label {
   display: block;
   font-size: .8rem;
-  color: rgba(255,255,255,.55);
+  color: rgba(255,255,255,.75);
   margin-top: .3rem;
   letter-spacing: .03em;
 }
@@ -1090,7 +1090,7 @@ ul { list-style: none; }
   margin-bottom: 1rem;
 }
 .footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
-.footer-col a { font-size: .88rem; color: rgba(255,255,255,.5); transition: color .2s; }
+.footer-col a { font-size: .88rem; color: rgba(255,255,255,.75); transition: color .2s; }
 .footer-col a:hover { color: var(--white); }
 
 .footer-bottom {
