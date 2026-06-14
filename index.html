@@ -238,8 +238,26 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#home" class="logo">
-        <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M13 2L20 9M20 9H12M20 9V17C20 18.1046 19.1046 19 18 19H4C2.89543 19 2 18.1046 2 17V7C2 5.89543 2.89543 5 4 5H12" stroke="var(--gold2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Arrow shaft (curved) -->
+          <path d="M 25 75 Q 35 60, 45 40 Q 50 30, 55 20" fill="none" stroke="url(#goldGradient)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Arrow shaft bottom curve -->
+          <path d="M 25 75 Q 40 65, 55 45 Q 60 35, 65 25" fill="none" stroke="url(#darkGoldGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+          <!-- Arrow head top -->
+          <polygon points="75,15 55,25 65,40" fill="url(#goldGradient)"/>
+          <!-- Arrow head bottom/shadow -->
+          <polygon points="75,15 55,25 68,35" fill="url(#darkGoldGradient)" opacity="0.7"/>
+
+          <defs>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#E8C94A;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="darkGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#C4941F;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#8B6F47;stop-opacity:1" />
+            </linearGradient>
+          </defs>
         </svg>
         Lead Path<span> Advisors</span>
       </a>
