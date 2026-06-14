@@ -1,4 +1,4 @@
-# Executive Edge robots.txt
+# Lead Path Advisors robots.txt
 # Allow all search engines to crawl and index content
 
 User-agent: *
@@ -27,7 +27,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://theexecutiveedge.com/sitemap.xml
+Sitemap: https://leadpathadvisors.com/sitemap.xml
 
 # Canonical domain preference
-Sitemap: https://www.theexecutiveedge.com/sitemap.xml
+Sitemap: https://www.leadpathadvisors.com/sitemap.xml
