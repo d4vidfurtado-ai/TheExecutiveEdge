@@ -211,6 +211,42 @@ const counterObserver = new IntersectionObserver(
 counters.forEach(c => counterObserver.observe(c));
 
 /* ============================================================
+   GOOGLE ANALYTICS — Event tracking
+   ============================================================ */
+let scrollDepthTracked = { '25': false, '50': false, '75': false, '90': false };
+window.addEventListener('scroll', () => {
+  if (typeof gtag === 'undefined') return;
+  const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if (scrollPercent >= 25 && !scrollDepthTracked['25']) {
+    gtag('event', 'scroll_depth', { 'value': 25 });
+    scrollDepthTracked['25'] = true;
+  }
+  if (scrollPercent >= 50 && !scrollDepthTracked['50']) {
+    gtag('event', 'scroll_depth', { 'value': 50 });
+    scrollDepthTracked['50'] = true;
+  }
+  if (scrollPercent >= 75 && !scrollDepthTracked['75']) {
+    gtag('event', 'scroll_depth', { 'value': 75 });
+    scrollDepthTracked['75'] = true;
+  }
+  if (scrollPercent >= 90 && !scrollDepthTracked['90']) {
+    gtag('event', 'scroll_depth', { 'value': 90 });
+    scrollDepthTracked['90'] = true;
+  }
+}, { passive: true });
+
+document.querySelectorAll('.btn-primary, .btn-outline').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'button_click', {
+        'button_text': btn.textContent.trim(),
+        'button_class': btn.className
+      });
+    }
+  });
+});
+
+/* ============================================================
    CONTACT FORM — Supabase submission to discovery_calls table
    ============================================================ */
 const SUPABASE_URL = 'https://uknmeyzfmugdzanvmfaa.supabase.co';
@@ -294,6 +330,12 @@ if (form) {
       });
 
       if (response.ok) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'discovery_call_request', {
+            'goal': data.goal,
+            'country': data.country
+          });
+        }
         btn.textContent = t.f_sent || '✓ Request sent!';
         btn.style.background = '#2d6a4f';
         btn.style.borderColor = '#2d6a4f';

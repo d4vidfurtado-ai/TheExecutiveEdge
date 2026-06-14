@@ -641,9 +641,9 @@ ul { list-style: none; }
   background: var(--navy);
   border-color: var(--navy);
   color: var(--white);
-  transform: scale(1.03);
+  padding: 2.75rem 2.25rem;
 }
-.service-card.featured:hover { transform: scale(1.03) translateY(-4px); }
+.service-card.featured:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
 .service-badge {
   display: inline-block;
