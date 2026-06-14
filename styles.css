@@ -159,6 +159,8 @@ ul { list-style: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
+  background: rgba(10,26,63,.85);
+  backdrop-filter: blur(8px);
   transition: background .3s, box-shadow .3s, padding .3s;
   padding: 1.25rem 0;
 }
