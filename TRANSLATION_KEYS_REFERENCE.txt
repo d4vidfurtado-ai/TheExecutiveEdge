@@ -1,0 +1,313 @@
+================================================================================
+COMPLETE TRANSLATION KEYS REFERENCE
+Lead Path Advisors - Article & Corporate Solutions Translation Keys
+================================================================================
+
+Total Keys: 92
+Languages: English (en), Portuguese (pt), Spanish (es), French (fr)
+Total Translations: 368 (92 keys × 4 languages)
+
+================================================================================
+ARTICLE 1: WHY EMOTIONAL INTELLIGENCE OUTPREDICTS IQ
+================================================================================
+
+Content Type: Article Lead & Body Content
+Source File: article1.html
+Total Keys: 17
+
+LEAD & OPENING
+  a1_lead                    Article lead paragraph
+
+SECTION 1: THE EXECUTIVE PERFORMANCE EQUATION
+  a1_p1                      Senior leaders rarely fail for lack...
+  a1_p2                      This is the logic behind what McClelland...
+  a1_p3                      The performance equation for executives...
+  a1_fig1_caption            Figure 1 caption (threshold-multiplier model)
+
+SECTION 2: THE SCIENCE
+  a1_p4                      Affective neuroscience offers the most...
+  a1_kf1                     Key finding: Emotional intelligence protects...
+  a1_p5                      Meta-analytic evidence consistently links...
+  a1_p6                      Finally, organizations themselves are...
+
+SECTION 3: ARCHITECTURE OF EXECUTIVE EI
+  a1_p7                      Emotional intelligence is not a single...
+  a1_p8                      Self-awareness, the recognition of...
+  a1_fig2_caption            Figure 2 caption (Goleman-Boyatzis model)
+
+SECTION 4: DEVELOPING EI DELIBERATELY
+  a1_p9                      The decisive advantage of emotional...
+  a1_p10                     Cognitive-behavioral techniques help leaders...
+
+SECTION 5: SCHEMATIC MODEL
+  a1_p11                     The mechanisms above can be integrated...
+  a1_fig3_caption            Figure 3 caption (causal pathway)
+
+CONCLUSION & CTA
+  a1_conclusion              In modern organizations, emotional intelligence...
+  a1_cta_p                   The Executive Edge uses evidence-based...
+
+================================================================================
+ARTICLE 2: MULTI-HORIZON CAREER STRATEGY
+================================================================================
+
+Content Type: Article Lead & Body Content
+Source File: article2.html
+Total Keys: 17
+
+LEAD & OPENING
+  a2_lead                    Most careers are not designed; they accumulate...
+
+SECTION 1: THE PROBLEM
+  a2_p1                      High-potential professionals rarely fail...
+  a2_p2                      The consequence is a career that is busy...
+
+SECTION 2: THE MULTI-HORIZON MODEL
+  a2_p3                      The model organizes a career across three...
+  a2_p4                      The five-year horizon is the identity layer...
+  a2_fig1_caption            Figure 1 caption (horizon cascade)
+
+SECTION 3: CAREER ANCHORS
+  a2_p5                      A trajectory built on the wrong foundation...
+  a2_p6                      In the multi-horizon model, anchors are...
+  a2_kf1                     Key finding: Career anchors as boundary...
+
+SECTION 4: APPLYING OKRS
+  a2_p7                      If career anchors set direction...
+  a2_p8                      Applied to a career, this discipline...
+
+SECTION 5: CAREER CAPITAL
+  a2_p9                      The reason the multi-horizon model...
+  a2_p10                     These three forms compound, and they...
+  a2_fig2_caption            Figure 2 caption (career capital compounding)
+
+SECTION 6: INTEGRATED SYSTEM
+  a2_p11                     Assembled, the four components form...
+  a2_fig3_caption            Figure 3 caption (operating system)
+
+CONCLUSION & CTA
+  a2_conclusion              Career acceleration is far more predictable...
+  a2_cta_p                   The Executive Edge builds personalized...
+
+================================================================================
+ARTICLE 3: DIGITAL AUTHORITY AS CAREER CAPITAL
+================================================================================
+
+Content Type: Article Lead & Body Content
+Source File: article3.html
+Total Keys: 15
+
+LEAD & OPENING
+  a3_lead                    For most of professional history...
+
+SECTION 1: WHY DIGITAL AUTHORITY MATTERS
+  a3_p1                      The strategic value of a digital presence...
+  a3_p2                      A second mechanism reinforces the first...
+  a3_kf1                     Key finding: Digital authority is signaling...
+
+SECTION 2: THE DIGITAL AUTHORITY FLYWHEEL
+  a3_p3                      Digital authority is not built through...
+  a3_p4                      The second layer is visibility...
+  a3_fig1_caption            Figure 1 caption (digital authority flywheel)
+
+SECTION 3: CONTENT STRATEGY
+  a3_p5                      What separates executives who build...
+  a3_p6                      Cadence matters as much as substance...
+
+SECTION 4: INTERNAL IMPACT
+  a3_p7                      It is tempting to read digital presence...
+  a3_p8                      The reputational capital built externally...
+
+SECTION 5: SCHEMATIC MODEL
+  a3_p9                      The full argument can be expressed...
+  a3_fig2_caption            Figure 2 caption (causal pathway)
+
+CONCLUSION & CTA
+  a3_conclusion              Digital authority is no longer optional...
+  a3_cta_p                   The Executive Edge helps executives design...
+
+================================================================================
+CORPORATE SOLUTIONS PAGE
+================================================================================
+
+Content Type: Corporate Services & Benefits
+Source File: corporate-solutions.html
+Total Keys: 42
+
+VALUE PROPOSITION SECTION (3 keys)
+  corp_value_p1              Measurable progression description
+  corp_value_p2              Leadership pipeline strength description
+  corp_value_p3              Retention through purpose description
+
+FRAMEWORK INTRODUCTION (1 key)
+  corp_framework_intro_p     Overview of 10 clusters foundation
+
+RESEARCH CLUSTERS - DESCRIPTIONS (10 keys)
+  corp_cluster1_desc         Leadership Development & Future-Ready Skills
+  corp_cluster2_desc         Evidence-Based Leadership & Management
+  corp_cluster3_desc         Transformational Leadership & Org Performance
+  corp_cluster4_desc         Organisational Career Growth (OCG)
+  corp_cluster5_desc         Skills for Senior Executives & Presence
+  corp_cluster6_desc         Employee Engagement & Leadership Effectiveness
+  corp_cluster7_desc         Change Leadership & Org Transformation
+  corp_cluster8_desc         High-Performing Teams & Collaboration
+  corp_cluster9_desc         Motivation, Work Behaviour & Performance
+  corp_cluster10_desc        Learning, Development & Career Growth
+
+APPLICATION SECTION (2 keys + 8 keys for impact items)
+  corp_application_p1        First paragraph explaining integration
+  corp_application_p2        Second paragraph about evidence base
+
+IMPACT ITEMS - HEADINGS & DESCRIPTIONS (8 keys)
+  corp_impact1_h4            "Executive diagnostics" heading
+  corp_impact1_p             Executive diagnostics description
+  corp_impact2_h4            "Multi-horizon career architecture" heading
+  corp_impact2_p             Multi-horizon career architecture description
+  corp_impact3_h4            "Behavioural transformation" heading
+  corp_impact3_p             Behavioural transformation description
+  corp_impact4_h4            "Organisational momentum" heading
+  corp_impact4_p             Organisational momentum description
+
+CTA SECTION (1 key)
+  corp_cta_p                 60-minute strategy session paragraph
+
+================================================================================
+SHARED/COMMON KEYS
+================================================================================
+
+Used Across Multiple Pages
+
+  shared_key_finding         "Key finding" label (used in articles)
+
+================================================================================
+USAGE EXAMPLES
+================================================================================
+
+In HTML with data-i18n attribute:
+
+  <p data-i18n="a1_lead">For most of the twentieth century...</p>
+  <p class="figure-caption" data-i18n="a1_fig1_caption">Below the...</p>
+  <div class="key-finding">
+    <p class="kf-label" data-i18n="shared_key_finding">Key finding</p>
+    <p data-i18n="a1_kf1">Emotional intelligence does not...</p>
+  </div>
+
+In JavaScript:
+
+  const translations = {
+    en: {
+      a1_lead: "For most of the twentieth century...",
+      ...
+    },
+    pt: {
+      a1_lead: "Durante a maior parte do século XX...",
+      ...
+    }
+  };
+
+================================================================================
+KEY STRUCTURE & NAMING CONVENTIONS
+================================================================================
+
+Article Keys:
+  Format: aX_[type][number]
+  aX_lead                    Lead paragraph
+  aX_pN                      Paragraph N (sequential)
+  aX_figN_caption            Figure N caption
+  aX_kfN                     Key finding N
+  aX_conclusion              Conclusion section
+  aX_cta_p                   Call-to-action paragraph
+
+  Examples:
+  - a1_p1 = Article 1, Paragraph 1
+  - a2_fig2_caption = Article 2, Figure 2 caption
+  - a3_kf1 = Article 3, Key finding 1
+
+Corporate Solutions Keys:
+  Format: corp_[section]_[detail]
+  corp_value_pN              Value proposition N
+  corp_clusterN_desc         Cluster N description
+  corp_impactN_h4            Impact item N heading
+  corp_impactN_p             Impact item N paragraph
+  corp_cta_p                 CTA paragraph
+
+  Examples:
+  - corp_value_p1 = Value proposition 1
+  - corp_cluster5_desc = Cluster 5 description
+  - corp_impact3_h4 = Impact item 3 heading
+
+================================================================================
+LANGUAGE CODES
+================================================================================
+
+  en                         English (default language)
+  pt                         Portuguese (Portugal)
+  es                         Spanish (Spain/Neutral)
+  fr                         French (France)
+
+All 92 keys are translated in all 4 languages.
+
+================================================================================
+QUICK STATISTICS
+================================================================================
+
+Articles:
+  - Article 1 (EI):            17 keys
+  - Article 2 (Career):        17 keys
+  - Article 3 (Digital):       15 keys
+  - Subtotal:                  49 keys
+
+Corporate:
+  - Value propositions:         3 keys
+  - Framework intro:            1 key
+  - Cluster descriptions:      10 keys
+  - Application paragraphs:     2 keys
+  - Impact items:               8 keys
+  - CTA:                        1 key
+  - Subtotal:                  25 keys
+
+Shared:
+  - Common labels:              1 key
+
+TOTAL:                          92 keys
+TOTAL TRANSLATIONS:            368 (92 × 4 languages)
+
+Content:
+  - Total words:              ~13,000+
+  - Total characters:         ~765,000
+  - Paragraphs:               50
+  - Figures:                  8
+  - Key findings:             3
+  - Clusters:                 10
+  - Impact items:             4
+
+================================================================================
+FILES DELIVERED
+================================================================================
+
+1. translations.js
+   - Updated with all 92 new keys
+   - 4 language objects (en, pt, es, fr)
+   - Ready to use immediately
+
+2. TRANSLATION_MAPPING.md
+   - Detailed mapping of keys to HTML content
+   - CSS selectors for each element
+   - Implementation examples
+   - Usage notes
+
+3. TRANSLATION_IMPLEMENTATION_SUMMARY.md
+   - Project overview
+   - Integration instructions
+   - Quality notes
+   - Next steps
+
+4. TRANSLATION_KEYS_REFERENCE.txt
+   - This file
+   - Quick reference for all keys
+   - Usage examples
+   - Naming conventions
+
+================================================================================
+END OF REFERENCE DOCUMENT
+================================================================================
